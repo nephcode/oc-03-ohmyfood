@@ -21,6 +21,10 @@ A SASS animated project for OpenClassrooms course AKA Project 3
 | SCRUM       | `GHERKIN`                      |
 
 ## INSTRUCTION
+````
+KEEP README ON *MAIN BRANCH PLEASE
+````
+
 
 - bla bla bla
 - Lorem blablapsum
