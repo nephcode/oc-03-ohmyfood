@@ -32,7 +32,7 @@ KEEP README ON *MAIN BRANCH PLEASE
 
 | TYPE      | LINK                                        |
 | --------- | ------------------------------------------- |
-| ANIMATION | [/documentation/animation.md](animation.md) |
+| ANIMATION | [animation.md](/documentation/animation.md) |
 
 ## EXPLAIN THE PROJECT
 
