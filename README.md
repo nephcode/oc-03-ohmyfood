@@ -18,6 +18,7 @@ A SASS animated project for OpenClassrooms course AKA Project 3
 | AGILE       | `GITHUB PROJECT`               |
 | STORAGE BIS | `SUPABASE`                     |
 | CI/CD       | `GITHUB PAGES` > `Branch MAIN` |
+<<<<<<< Updated upstream
 | SCRUM       | `GHERKIN`                      |
 
 ## INSTRUCTION
@@ -28,12 +29,28 @@ KEEP README ON *MAIN BRANCH PLEASE
 
 - bla bla bla
 - Lorem blablapsum
+=======
+
+## INSTRUCTION
+
+- bla bla bla
+- Lorem blablapsum
+
+## DOCUMENTATION
+
+| TYPE      | LINK                                        |
+| --------- | ------------------------------------------- |
+| ANIMATION | [/documentation/animation.md](animation.md) |
+>>>>>>> Stashed changes
 
 ## EXPLAIN THE PROJECT
 
 👀 hey do you know that's speak about ufo on US Congress ??? 😅
 
+<<<<<<< Updated upstream
 - Create _GIT PROJECT_ on Github
 - Add _BRANCH_ main, dev, and per feature
 
+=======
+>>>>>>> Stashed changes
 ![cover](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/public/nephcode-public/githubReadmeSkills.png)
