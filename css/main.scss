@@ -1,0 +1,113 @@
+//============================================= OC-03 OHMYFOOD =======//
+// GLOBAL SCSS VAR & RULES ===========================================//
+//==============================================================2023==//
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+
+/* COLORS ------------------------------------------------------------*/
+$background-site: white;
+$background-footer: #353535;
+$button-primary: #9356dc;
+$action-primary: #99e2d0;
+$action-secondary: #008766;
+
+$fall-primary: #003a68;
+$fall-secondary: #89c8fa;
+
+$heart-primary: #9747ff;
+
+/* PAGES RULES ------------------------------------------------------------*/
+* {
+  /* Rules */
+  box-sizing: border-box;
+  font-family: "roboto";
+  font-size: 1rem;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: $background-site;
+}
+
+//=========================================== OhMyF°_°D ==============//
+// HEADER ============================================================//
+//====================================================================//
+
+header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  & .logo {
+    justify-self: center;
+    width: 200px;
+  }
+}
+
+//=========================================== OhMyF°_°D ==============//
+// FOOTER ============================================================//
+//====================================================================//
+
+footer {
+  background-color: $background-footer;
+  font-family: "roboto";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 1rem;
+  nav {
+    a {
+      color: white;
+      text-decoration: none;
+      &:link {
+        color: white;
+      }
+      &:visited {
+        color: white;
+      }
+    }
+  }
+  & #logo-footer{
+    width: 130px;
+    & path{
+
+    
+    fill: white; // Change la couleur de remplissage de la partie 1 en blanc
+    }
+  }
+}
+
+//=========================================== OhMyF°_°D ==============//
+// HN TITLE ==========================================================//
+//====================================================================//
+h1,
+h2,
+h3 {
+  font-family: "roboto";
+  font-size: 1.2rem;
+}
+//=========================================== OhMyF°_°D ==============//
+// ELEMENTS ==========================================================//
+//====================================================================//
+
+/* BUTTONS -----------------------------------------------------------*/
+
+//code button here
+
+/* FAVORITES ---------------------------------------------------------*/
+
+//code Favorite heart icon here
+
+/* INFO --------------------------------------------------------------*/
+
+//code nouveau stiker here
+
+/* BUTTONS -----------------------------------------------------------*/
+
+/* BUTTONS -----------------------------------------------------------*/
+
+//=========================================== OhMyF°_°D ==============//
+// MEAL LIST =========================================================//
+//====================================================================//
+
+//code meal list here

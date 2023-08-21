@@ -45,6 +45,8 @@ footer nav a:visited {
 }
 footer #logo-footer {
   width: 130px;
+}
+footer #logo-footer path {
   fill: white;
 }
 
@@ -59,9 +61,4 @@ h3 {
 /* FAVORITES ---------------------------------------------------------*/
 /* INFO --------------------------------------------------------------*/
 /* BUTTONS -----------------------------------------------------------*/
-/* BUTTONS -----------------------------------------------------------*/
-:root {
-  box-sizing: border-box;
-  margin: 0;
-  padding: auto;
-}/*# sourceMappingURL=index.css.map */
+/* BUTTONS -----------------------------------------------------------*//*# sourceMappingURL=main.css.map */
