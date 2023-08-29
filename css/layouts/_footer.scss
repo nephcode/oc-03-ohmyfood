@@ -1,0 +1,43 @@
+//=========================================== OhMyF°_°D ==============//
+// FOOTER ============================================================//
+//====================================================================//
+
+footer {
+  //background-color: colors.$background-footer;
+  background-color: #353535;
+  font-family: "roboto";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 1rem;
+  padding: 25px;
+  nav {
+    lu li {
+      list-style-type: none;
+      padding-top: 10px;
+      img {
+        padding-right: 10px;
+        + a {
+          font-weight: 500;
+        }
+      }
+    }
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:link {
+        color: white;
+      }
+      &:visited {
+        color: white;
+      }
+    }
+  }
+  & #logo-footer {
+    width: 130px;
+    & path {
+      fill: white; // Change la couleur de remplissage de la partie 1 en blanc
+    }
+  }
+}

@@ -1,0 +1,15 @@
+//=========================================== OhMyF°_°D ==============//
+// HEADER ============================================================//
+//====================================================================//
+
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 2 fr);
+    gap: 20px;
+    background-color:white;
+    & .logo {
+      justify-self: center;
+      width: 200px;
+      padding: 20px;
+    }
+  }

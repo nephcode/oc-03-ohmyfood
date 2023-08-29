@@ -1,28 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-/* COLORS ------------------------------------------------------------*/
-/* PAGES RULES ------------------------------------------------------------*/
-* {
-  /* Rules */
-  box-sizing: border-box;
+h1,
+h2,
+h3 {
   font-family: "roboto";
-  font-size: 1rem;
-}
-
-html,
-body {
-  margin: 0;
-  background-color: white;
+  font-size: 1.2rem;
 }
 
 header {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 2 fr);
   gap: 20px;
+  background-color: white;
 }
 header .logo {
   justify-self: center;
   width: 200px;
+  padding: 20px;
 }
 
 footer {
@@ -32,6 +26,17 @@ footer {
   font-weight: 400;
   line-height: normal;
   font-size: 1rem;
+  padding: 25px;
+}
+footer nav lu li {
+  list-style-type: none;
+  padding-top: 10px;
+}
+footer nav lu li img {
+  padding-right: 10px;
+}
+footer nav lu li img + a {
+  font-weight: 500;
 }
 footer nav a {
   color: white;
@@ -50,6 +55,20 @@ footer #logo-footer path {
   fill: white;
 }
 
+/* PAGES RULES ------------------------------------------------------------*/
+* {
+  /* Rules */
+  box-sizing: border-box;
+  font-family: "roboto";
+  font-size: 1rem;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: white;
+}
+
 h1,
 h2,
 h3 {
@@ -59,6 +78,6 @@ h3 {
 
 /* BUTTONS -----------------------------------------------------------*/
 /* FAVORITES ---------------------------------------------------------*/
-/* INFO --------------------------------------------------------------*/
+/* INFO -------------------------------------------------------------*/
 /* BUTTONS -----------------------------------------------------------*/
 /* BUTTONS -----------------------------------------------------------*//*# sourceMappingURL=main.css.map */
