@@ -1,0 +1,52 @@
+//===============================OhMyF°>°D= ======================//
+// CARD ============================================ =============//
+//================================================================//
+.card{
+    display: flex;
+    flex-basis: 29%;
+    //--------------
+    &a {
+    background-color: var(--base);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+    --img-ratio: 16 / 9;
+    gap: 0.1rem;
+    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
+    border-radius: var(--radius);
+    border: 0px;
+    text-decoration: none;
+    //-------------
+    &:visited {
+    border: 0px;
+    color: transparent;
+    }
+    //--------------
+    img {
+    aspect-ratio: var(--img-ratio);
+    object-fit: cover;
+    width: 100%;
+    border-top-right-radius: var(--radius);
+    border-top-left-radius: var(--radius);
+    padding: 0.2rem;
+    //---------------    
+    &--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 2px 0px 5px 10px;
+    
+    h3 {
+    margin: 5px 0px;
+    padding: 0px 10px 0px 0px;
+    height: auto;
+    }
+    &--subtitle {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+//================================================================//

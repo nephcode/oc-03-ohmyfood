@@ -55,6 +55,28 @@ footer #logo-footer path {
   fill: white;
 }
 
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: auto;
+}
+
+/* === SECTION LOCATION ============================================ */
+#location {
+  display: grid;
+  grid-template-columns: repeat(3, 2 fr);
+  gap: 20px;
+  background-color: #eaeaea;
+}
+#location .logo {
+  justify-self: center;
+  width: 200px;
+  padding: 20px;
+}
+
+/* === SECTION EXPLORATION ========================================= */
+/* === SECTION FONCTIONNEMENT ====================================== */
+/* === SECTION RESTAURANT ========================================== */
 /* PAGES RULES ------------------------------------------------------------*/
 * {
   /* Rules */
@@ -67,17 +89,4 @@ html,
 body {
   margin: 0;
   background-color: white;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "roboto";
-  font-size: 1.2rem;
-}
-
-/* BUTTONS -----------------------------------------------------------*/
-/* FAVORITES ---------------------------------------------------------*/
-/* INFO -------------------------------------------------------------*/
-/* BUTTONS -----------------------------------------------------------*/
-/* BUTTONS -----------------------------------------------------------*//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

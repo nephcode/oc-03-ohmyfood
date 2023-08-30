@@ -1,17 +1,35 @@
 //============================================= OC-03 OHMYFOOD =======//
 // GLOBAL SCSS VAR & RULES ===========================================//
 //==============================================================2023==//
-@import "main";
-@import "header";
 :root{
     box-sizing: border-box;
     margin: 0;
     padding: auto;
 }
 
+/* === SECTION LOCATION ============================================ */
+#location {
+    display: grid;
+    grid-template-columns: repeat(3, 2 fr);
+    gap: 20px;
+    background-color:#eaeaea;
+    & .logo {
+      justify-self: center;
+      width: 200px;
+      padding: 20px;
+    }
+  }
+/* === SECTION EXPLORATION ========================================= */
+/* === SECTION FONCTIONNEMENT ====================================== */
+/* === SECTION RESTAURANT ========================================== */
+
+
+
+  
+
+
+
+
 //============================================= OC-03 OHMYFOOD =======//
 // LOCALIZE ==========================================================//
 //==============================================================2023==//
-
-
-
