@@ -1,10 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: "roboto";
   font-size: 1.2rem;
+}
+
+p {
+  font-family: 1rem;
+}
+
+.buttonValid {
+  color: #ffffff;
+  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.5);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.addFavorite {
+  background-color: #9747ff;
+}
+
+.buttonNew {
+  background-color: #99e2d0;
+}
+
+* {
+  /* Rules */
+  box-sizing: border-box;
+  font-family: "roboto";
+  font-size: 1rem;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: magenta;
 }
 
 header {
@@ -19,6 +52,47 @@ header .logo {
   padding: 20px;
 }
 
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: auto;
+}
+
+/* === SECTION LOCATION ============================================ */
+#location {
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  background-color: #eaeaea;
+}
+#location p {
+  display: flex;
+  align-items: center;
+}
+#location p img {
+  padding-right: 10px;
+}
+
+/* === SECTION EXPLORATION ========================================= */
+#exploration {
+  display: grid;
+  place-items: center;
+  background-color: #f6f6f6;
+}
+#exploration h1 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+#exploration p {
+  text-align: center;
+}
+
+/* === SECTION FONCTIONNEMENT ====================================== */
+/* === SECTION RESTAURANT ========================================== */
 footer {
   background-color: #353535;
   font-family: "roboto";
@@ -53,40 +127,4 @@ footer #logo-footer {
 }
 footer #logo-footer path {
   fill: white;
-}
-
-:root {
-  box-sizing: border-box;
-  margin: 0;
-  padding: auto;
-}
-
-/* === SECTION LOCATION ============================================ */
-#location {
-  display: grid;
-  grid-template-columns: repeat(3, 2 fr);
-  gap: 20px;
-  background-color: #eaeaea;
-  /*p img {
-    justify-self: center;
-    align-items: center;
-    padding: 20px;
-  }*/
-}
-
-/* === SECTION EXPLORATION ========================================= */
-/* === SECTION FONCTIONNEMENT ====================================== */
-/* === SECTION RESTAURANT ========================================== */
-/* PAGES RULES ------------------------------------------------------------*/
-* {
-  /* Rules */
-  box-sizing: border-box;
-  font-family: "roboto";
-  font-size: 1rem;
-}
-
-html,
-body {
-  margin: 0;
-  background-color: magenta;
 }/*# sourceMappingURL=home.css.map */

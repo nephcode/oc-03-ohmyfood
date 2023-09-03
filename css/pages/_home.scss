@@ -1,40 +1,51 @@
 //============================================= OC-03 OHMYFOOD =======//
 // GLOBAL SCSS VAR & RULES ===========================================//
 //==============================================================2023==//
-@use '../base/colors';
+@use "../base/colors";
 
-:root{
-    box-sizing: border-box;
-    margin: 0;
-    padding: auto;
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: auto;
 }
 
 /* === SECTION LOCATION ============================================ */
 #location {
-    display: grid;
-    grid-template-columns: repeat(3, 2 fr);
-    gap: 20px;
-    background-color: colors.$background-location;
-    
-    /*p img {
-      justify-self: center;
-      align-items: center;
-      padding: 20px;
-    }*/
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  background-color: colors.$background-location;
+
+  p {
+    display: flex;
+    align-items: center;
+
+    img {
+      padding-right: 10px;
+    }
   }
+}
 /* === SECTION EXPLORATION ========================================= */
+#exploration {
+  display: grid;
+  place-items: center;
+  background-color: colors.$background-exploration;
 
-
+  h1 {
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+}
 
 /* === SECTION FONCTIONNEMENT ====================================== */
 /* === SECTION RESTAURANT ========================================== */
-
-
-
-  
-
-
-
 
 //============================================= OC-03 OHMYFOOD =======//
 // LOCALIZE ==========================================================//
