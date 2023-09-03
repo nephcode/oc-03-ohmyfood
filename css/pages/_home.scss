@@ -1,6 +1,8 @@
 //============================================= OC-03 OHMYFOOD =======//
 // GLOBAL SCSS VAR & RULES ===========================================//
 //==============================================================2023==//
+@use '../base/colors';
+
 :root{
     box-sizing: border-box;
     margin: 0;
@@ -12,14 +14,18 @@
     display: grid;
     grid-template-columns: repeat(3, 2 fr);
     gap: 20px;
-    background-color:#eaeaea;
-    & .logo {
+    background-color: colors.$background-location;
+    
+    /*p img {
       justify-self: center;
-      width: 200px;
+      align-items: center;
       padding: 20px;
-    }
+    }*/
   }
 /* === SECTION EXPLORATION ========================================= */
+
+
+
 /* === SECTION FONCTIONNEMENT ====================================== */
 /* === SECTION RESTAURANT ========================================== */
 

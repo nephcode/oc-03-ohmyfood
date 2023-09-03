@@ -67,11 +67,11 @@ footer #logo-footer path {
   grid-template-columns: repeat(3, 2 fr);
   gap: 20px;
   background-color: #eaeaea;
-}
-#location .logo {
-  justify-self: center;
-  width: 200px;
-  padding: 20px;
+  /*p img {
+    justify-self: center;
+    align-items: center;
+    padding: 20px;
+  }*/
 }
 
 /* === SECTION EXPLORATION ========================================= */
@@ -88,5 +88,5 @@ footer #logo-footer path {
 html,
 body {
   margin: 0;
-  background-color: white;
-}/*# sourceMappingURL=main.css.map */
+  background-color: magenta;
+}/*# sourceMappingURL=home.css.map */

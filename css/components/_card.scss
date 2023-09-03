@@ -17,11 +17,12 @@
     border-radius: var(--radius);
     border: 0px;
     text-decoration: none;
-    //-------------
-    &:visited {
-    border: 0px;
-    color: transparent;
-    }
+      //-------------
+      &:visited {
+      border: 0px;
+      color: transparent;
+      }
+    }  
     //--------------
     img {
     aspect-ratio: var(--img-ratio);
@@ -30,23 +31,25 @@
     border-top-right-radius: var(--radius);
     border-top-left-radius: var(--radius);
     padding: 0.2rem;
-    //---------------    
-    &--content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0px;
-    margin: 2px 0px 5px 10px;
+      //---------------    
+      &--content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0px;
+      margin: 2px 0px 5px 10px;
+    }
     
     h3 {
     margin: 5px 0px;
     padding: 0px 10px 0px 0px;
     height: auto;
-    }
-    &--subtitle {
-    padding: 0;
-    margin: 0;
+    
+      &--subtitle {
+      padding: 0;
+      margin: 0;
+    }  
   }
 }
 
-//================================================================//
+}

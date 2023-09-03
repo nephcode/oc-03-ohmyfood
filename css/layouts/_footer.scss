@@ -1,10 +1,11 @@
 //=========================================== OhMyF°_°D ==============//
 // FOOTER ============================================================//
 //====================================================================//
+@use '../base/colors';
 
 footer {
-  //background-color: colors.$background-footer;
-  background-color: #353535;
+  background-color: colors.$background-footer;
+  //background-color: #353535;
   font-family: "roboto";
   font-style: normal;
   font-weight: 400;
