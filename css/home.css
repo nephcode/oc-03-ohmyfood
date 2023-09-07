@@ -23,8 +23,79 @@ p {
   background-color: #9747ff;
 }
 
-.buttonNew {
-  background-color: #99e2d0;
+.listWizard {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0px;
+  margin: 20px;
+}
+.listWizard li {
+  display: flex;
+  align-content: center;
+  padding: 30px;
+  margin: 5px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.5);
+}
+.listWizard li span {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #9356dc;
+  text-align: center;
+  padding: 3px;
+  min-height: 25px;
+  min-width: 25px;
+  border-radius: 50%;
+  margin-left: -43px;
+}
+.listWizard li img {
+  height: 22px;
+}
+
+.card {
+  display: flex;
+  align-self: center;
+  width: 90%;
+  flex-basis: 90%;
+  margin-bottom: 15px;
+}
+.card a {
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  font-size: 0.8rem;
+  gap: 0.1rem;
+  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  border: 0px;
+  text-decoration: none;
+}
+.card a:active {
+  color: black;
+}
+.card a:visited {
+  border: 0px;
+  color: black;
+}
+.card h3 {
+  margin: 5px 0px 0px;
+  padding: 0px 10px 0px 20px;
+  height: auto;
+}
+.card address {
+  margin: 0px 0px 10px;
+  padding: 0px 10px 0px 20px;
+  height: auto;
+}
+.card img {
+  aspect-ratio: 1.7777777778;
+  object-fit: cover;
+  width: 100%;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
 }
 
 * {
@@ -37,7 +108,7 @@ p {
 html,
 body {
   margin: 0;
-  background-color: magenta;
+  background-color: #ffffff;
 }
 
 header {
@@ -92,7 +163,33 @@ header .logo {
 }
 
 /* === SECTION FONCTIONNEMENT ====================================== */
+#fonctionnement {
+  background-color: #ffffff;
+}
+#fonctionnement h2 {
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+  margin: 10px 0px 0px 10px;
+}
+
 /* === SECTION RESTAURANT ========================================== */
+#restaurant {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+#restaurant h2 {
+  width: 100%;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+  margin: 10px 0px 10px 10px;
+}
+
 footer {
   background-color: #353535;
   font-family: "roboto";

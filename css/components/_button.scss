@@ -3,7 +3,6 @@
 //==================================== By Nepha ================2023==//
 @use "../base/colors";
 
-
 // VALID ============================= By Nepha ================2023==//
 @mixin buttonGradient($start, $end) {
   background: linear-gradient(175deg, $start 0%, $end 100%);
@@ -16,7 +15,10 @@
 .buttonValid {
   color: colors.$buttonTextColor;
   //background-color mixin
-  @include buttonGradient(colors.$buttonGradientStart, colors.$buttonGradientEnd);
+  @include buttonGradient(
+    colors.$buttonGradientStart,
+    colors.$buttonGradientEnd
+  );
   //box-shadow mixin
   @include buttonShadow(colors.$buttonShadowColor, colors.$buttonShadowValues);
   //rules css
@@ -25,7 +27,7 @@
   border-radius: 50px;
   text-decoration: none;
 
-  //:hover, :active nesting anination 
+  //:hover, :active nesting anination
 }
 // ADD =============================== By Nepha ================2023==//
 .addFavorite {
@@ -33,7 +35,46 @@
 }
 
 // NEW =============================== By Nepha ================2023==//
-.buttonNew {
-  background-color: colors.$action-primary;
+@mixin buttonNew($start, $end) {
+  background: linear-gradient(175deg, $start 0%, $end 100%);
 }
+
+//refaire le mixni
+
+
+// LIST WIZARD ======================= By Nepha ================2023==//
+.listWizard {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+ 
+  padding: 0px;
+  margin: 20px;
+  li {
+    display: flex;
+    align-content: center;
+    padding: 30px;
+    margin: 5px;
+    background-color: colors.$backgroundGlobal;
+    border-radius: 20px;
+    @include buttonShadow(colors.$buttonShadowColor, colors.$buttonShadowValues);
+
+    span{
+        display: inline-block;
+        color: colors.$buttonTextColor;
+        background-color: colors.$backgroundGlobalElement;
+        text-align: center;
+        padding: 3px;
+        min-height: 25px;
+        min-width: 25px;
+        border-radius: 50%;
+        margin-left: -43px;
+    }
+
+    img {
+      height: 22px;
+    }
+  }
+}
+
 // Because my team love 🫶 camelCase 🐫 ===================== Neah ===//
