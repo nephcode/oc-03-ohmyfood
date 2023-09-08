@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 h1, h2, h3 {
@@ -23,6 +24,21 @@ p {
   background-color: #9747ff;
 }
 
+.new {
+  display: block;
+  position: absolute;
+  width: 80px;
+  right: 15px;
+  text-align: center;
+  top: 15px;
+  z-index: 10;
+  padding: 10px;
+  background-color: #99E2D0; /* Vert clair avec un peu de transparence */
+  border-radius: 3px;
+  padding: 5px 10px; /* Espace intérieur autour du texte */
+  color: #008766;
+}
+
 .listWizard {
   display: flex;
   flex-direction: column;
@@ -35,6 +51,8 @@ p {
   align-content: center;
   padding: 30px;
   margin: 5px;
+  max-width: 250px;
+  width: 250px;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.5);
@@ -52,6 +70,7 @@ p {
 }
 .listWizard li img {
   height: 22px;
+  padding: 0px 20px;
 }
 
 .card {
@@ -60,6 +79,7 @@ p {
   width: 90%;
   flex-basis: 90%;
   margin-bottom: 15px;
+  position: relative;
 }
 .card a {
   background-color: #ffffff;
@@ -69,15 +89,15 @@ p {
   font-size: 0.8rem;
   gap: 0.1rem;
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
+  border-radius: 20px;
   border: 0px;
   text-decoration: none;
+  color: black;
 }
 .card a:active {
   color: black;
 }
 .card a:visited {
-  border: 0px;
   color: black;
 }
 .card h3 {
@@ -94,8 +114,8 @@ p {
   aspect-ratio: 1.7777777778;
   object-fit: cover;
   width: 100%;
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 * {
@@ -173,10 +193,28 @@ header .logo {
   text-align: left;
   margin: 10px 0px 0px 10px;
 }
+@media screen and (min-width: 767px) {
+  #fonctionnement {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  #fonctionnement .listWizard, #fonctionnement h2 {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+  }
+  #fonctionnement .listWizard li, #fonctionnement h2 li {
+    max-width: 250px;
+  }
+}
 
 /* === SECTION RESTAURANT ========================================== */
 #restaurant {
-  background-color: #ffffff;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -188,6 +226,18 @@ header .logo {
   line-height: normal;
   text-align: left;
   margin: 10px 0px 10px 10px;
+}
+@media screen and (min-width: 767px) {
+  #restaurant {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1;
+    grid-area: title title;
+  }
+  #restaurant .card {
+    max-width: 300px;
+  }
 }
 
 footer {
@@ -222,6 +272,16 @@ footer nav a:visited {
 footer #logo-footer {
   width: 130px;
 }
-footer #logo-footer path {
-  fill: white;
+@media screen and (min-width: 767px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+  }
+  footer nav,
+  footer ul, footer li {
+    display: inline-flex;
+    padding-right: 10px;
+    margin-right: 16px;
+  }
 }/*# sourceMappingURL=home.css.map */

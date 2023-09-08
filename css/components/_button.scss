@@ -37,11 +37,25 @@
 // NEW =============================== By Nepha ================2023==//
 @mixin buttonNew($start, $end) {
   background: linear-gradient(175deg, $start 0%, $end 100%);
+
 }
+//refaire le mixin
+.new {
+  //rules css
+  display: block;
+  position: absolute;
+  width: 80px;
+  right:15px;
+  text-align: center;
+  top: 15px;
+  z-index: 10;
+  padding: 10px;
+  background-color: #99E2D0; /* Vert clair avec un peu de transparence */
+  border-radius: 3px;
+  padding: 5px 10px; /* Espace intérieur autour du texte */
+  color: #008766;
 
-//refaire le mixni
-
-
+}
 // LIST WIZARD ======================= By Nepha ================2023==//
 .listWizard {
   display: flex;
@@ -55,6 +69,8 @@
     align-content: center;
     padding: 30px;
     margin: 5px;
+    max-width: 250px;
+    width: 250px;
     background-color: colors.$backgroundGlobal;
     border-radius: 20px;
     @include buttonShadow(colors.$buttonShadowColor, colors.$buttonShadowValues);
@@ -73,6 +89,7 @@
 
     img {
       height: 22px;
+      padding: 0px 20px;
     }
   }
 }

@@ -55,11 +55,30 @@
     text-align: left;
     margin: 10px 0px 0px 10px;
   }
+  @media screen and (min-width: 767px) {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    .listWizard, h2 {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction : row ;
+      align-content: center;
+
+      li{
+        max-width: 250px;
+      }
+    }
+  }  
+    
 }
 
 /* === SECTION RESTAURANT ========================================== */
 #restaurant {
-  background-color: colors.$backgroundGlobal;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: colors.$background-exploration;
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -71,6 +90,20 @@
     line-height: normal;
     text-align: left;
     margin: 10px 0px 10px 10px;
+  }
+  @media screen and (min-width: 767px) {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: (2fr 1) ;
+    grid-area: title title;
+
+    .card{
+      max-width: 300px;
+    }
+
+
   }
 }
 

@@ -1,10 +1,11 @@
 //===============================OhMyF°>°D= ======================//
 // CARD ============================================ =============//
 //================================================================//
-@use "../base/colors";
+@use '../base/colors';
+@use 'sass:math';
 
-$imgRatio: 16 / 9;
-$radiusCard: 25px;
+$imgRatio: math.div(16, 9);
+$radiusCard: 20px;
 
 .card {
   display: flex;
@@ -12,6 +13,7 @@ $radiusCard: 25px;
   width: 90%;
   flex-basis: 90%;
   margin-bottom:15px ;
+  position: relative;
   //--------------
   a {
     background-color: colors.$backgroundGlobal;
@@ -24,12 +26,12 @@ $radiusCard: 25px;
     border-radius: $radiusCard;
     border: 0px;
     text-decoration: none;
+    color: black;
     //-------------
     &:active {
       color: black;
     }
     &:visited {
-      border: 0px;
       color: black;
     }
   }
@@ -44,6 +46,8 @@ $radiusCard: 25px;
     padding: 0px 10px 0px 20px;
     height: auto;
   }
+
+
 
   img {
     aspect-ratio: $imgRatio;
