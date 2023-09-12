@@ -2,6 +2,7 @@
 // GLOBAL SCSS VAR & RULES ===========================================//
 //==============================================================2023==//
 @use "../base/colors";
+@use "sass:math";
 
 :root {
   box-sizing: border-box;
@@ -47,7 +48,7 @@
 /* === SECTION FONCTIONNEMENT ====================================== */
 #fonctionnement {
   background-color: colors.$backgroundGlobal;
-
+ 
   h2 {
     font-style: normal;
     font-weight: 600;
@@ -56,32 +57,30 @@
     margin: 10px 0px 0px 10px;
   }
   @media screen and (min-width: 767px) {
-    max-width: 1280px;
+    max-width: 1080px;
     margin: 0 auto;
-
-    .listWizard, h2 {
-      max-width: 1280px;
-      margin: 0 auto;
+        
+    .listWizard,
+     {
       display: flex;
-      flex-direction : row ;
-      align-content: center;
+      flex-direction: row;
 
-      li{
+      li {
         max-width: 250px;
       }
     }
-  }  
-    
+  }
 }
 
 /* === SECTION RESTAURANT ========================================== */
 #restaurant {
-  max-width: 1280px;
-  margin: 0 auto;
   background-color: colors.$background-exploration;
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
+
+  div{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
 
   h2 {
     width: 100%;
@@ -90,20 +89,37 @@
     line-height: normal;
     text-align: left;
     margin: 10px 0px 10px 10px;
+    grid-area: title;
   }
   @media screen and (min-width: 767px) {
-    max-width: 1280px;
+    div{
+    max-width: 1024px;
     margin: 0 auto;
-
+    padding: 0px 0vw 20px;    
     display: grid;
-    grid-template-columns: (2fr 1) ;
-    grid-area: title title;
-
-    .card{
-      max-width: 300px;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1vw;
+    grid-template-areas:
+      "title title"
+      "card1 card2"
+      "card3 card4";
     }
 
-
+    .card {
+      $imgRatio: math.div(2.618, 1);
+      
+      img{
+        aspect-ratio: $imgRatio;
+      }
+    }
+    @for $i from 1 through 4 {
+      .card:nth-child(#{$i + 1}) {
+        // +1 car le h2 est le premier enfant
+        grid-area: card#{$i};
+      }
+    }
   }
 }
 

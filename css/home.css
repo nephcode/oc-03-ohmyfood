@@ -48,17 +48,18 @@ p {
 }
 .listWizard li {
   display: flex;
-  align-content: center;
+  align-items: center;
+  height: 30px;
   padding: 30px;
-  margin: 5px;
-  max-width: 250px;
-  width: 250px;
+  margin: 5px 10px;
+  max-width: 350px;
+  width: 300px;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.5);
 }
 .listWizard li span {
-  display: inline-block;
+  display: block;
   color: #ffffff;
   background-color: #9356dc;
   text-align: center;
@@ -70,7 +71,7 @@ p {
 }
 .listWizard li img {
   height: 22px;
-  padding: 0px 20px;
+  padding: 0px 15px;
 }
 
 .card {
@@ -195,26 +196,23 @@ header .logo {
 }
 @media screen and (min-width: 767px) {
   #fonctionnement {
-    max-width: 1280px;
+    max-width: 1080px;
     margin: 0 auto;
   }
-  #fonctionnement .listWizard, #fonctionnement h2 {
-    max-width: 1280px;
-    margin: 0 auto;
+  #fonctionnement .listWizard {
     display: flex;
     flex-direction: row;
-    align-content: center;
   }
-  #fonctionnement .listWizard li, #fonctionnement h2 li {
+  #fonctionnement .listWizard li {
     max-width: 250px;
   }
 }
 
 /* === SECTION RESTAURANT ========================================== */
 #restaurant {
-  max-width: 1280px;
-  margin: 0 auto;
   background-color: #f6f6f6;
+}
+#restaurant div {
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -226,17 +224,34 @@ header .logo {
   line-height: normal;
   text-align: left;
   margin: 10px 0px 10px 10px;
+  grid-area: title;
 }
 @media screen and (min-width: 767px) {
-  #restaurant {
-    max-width: 1280px;
+  #restaurant div {
+    max-width: 1024px;
     margin: 0 auto;
+    padding: 0px 0vw 20px;
     display: grid;
-    grid-template-columns: 2fr 1;
-    grid-area: title title;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1vw;
+    grid-template-areas: "title title" "card1 card2" "card3 card4";
   }
-  #restaurant .card {
-    max-width: 300px;
+  #restaurant .card img {
+    aspect-ratio: 2.618;
+  }
+  #restaurant .card:nth-child(2) {
+    grid-area: card1;
+  }
+  #restaurant .card:nth-child(3) {
+    grid-area: card2;
+  }
+  #restaurant .card:nth-child(4) {
+    grid-area: card3;
+  }
+  #restaurant .card:nth-child(5) {
+    grid-area: card4;
   }
 }
 
