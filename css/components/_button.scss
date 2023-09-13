@@ -70,6 +70,7 @@
     height: 30px;   
     padding: 30px;
     margin: 5px 10px;
+
     max-width: 350px;
     width: 300px;
     background-color: colors.$backgroundGlobal;
@@ -94,5 +95,50 @@
     }
   }
 }
+// LIST WIZARD ======================= By Nepha ================2023==//
+.listDishes {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+ 
+  padding: 0px;
+  margin: 20px;
+  li {
+    display: flex;
+    align-items: center;
+    height: 30px;   
+    padding: 30px;
+    margin: 5px 10px;
+    
+    max-width: 350px;
+    width: 300px;
+    background-color: colors.$backgroundGlobal;
+    border-radius: 20px;
+    @include buttonShadow(colors.$buttonShadowColor, colors.$buttonShadowValues);
+
+    span{
+        display: block;
+     
+        &[itemprop="name"] {
+          font-weight: bold;
+          color: blue;
+      }
+        &[itemprop="description"]{
+          color: green;
+        }
+        &[itemprop="offers"]{
+          color : magenta;
+        }
+
+
+    }
+
+    img {
+      height: 22px;
+      padding: 0px 15px;
+    }
+  }
+}
+
 
 // Because my team love 🫶 camelCase 🐫 ===================== Neah ===//

@@ -60,7 +60,7 @@
     max-width: 1080px;
     margin: 0 auto;
         
-    .listWizard,
+    .listWizard
      {
       display: flex;
       flex-direction: row;
@@ -75,7 +75,6 @@
 /* === SECTION RESTAURANT ========================================== */
 #restaurant {
   background-color: colors.$background-exploration;
-
   div{
     display: flex;
     flex-direction: column;
