@@ -5,33 +5,60 @@
 @use "../base/typo";
 @use "sass:math";
 
-/* === MAIN ============================================= */
-#main {
-    display: grid;
-    place-items: center;
-    background-color: colors.$background-exploration;
+/* === BANNER ============================================= */
+#banner {
+  width: 100%;
   
-    h1 {
-      font-family: "Shrikhand" ;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      text-align: center;
-    }
-    p {
-      text-align: center;
-    }
+  $bannerRatio: math.div(2.618, 1);
+ // z-index: -1;
+  position: sticky;
+  img {
+    aspect-ratio: $bannerRatio;
+    object-fit: cover;
+    width: 100%;
+  }
+  @media screen and (min-width: 767px) {
+    height: 200px;
   }
 
-  /* === SECTION EXPLORATION ========================================= */
-#exploration {
-    display: grid;
-    place-items: center;
-    background-color: colors.$background-exploration;
-  
-    p {
-      text-align: center;
-    }
+}
+
+/* === MAIN ============================================= */
+main {
+  display: grid;
+  place-items: center;
+  background-color: colors.$background-exploration;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  position: relative;
+  top: -50px;
+  z-index: 20;
+
+  h1 {
+    font-family: "Shrikhand";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
   }
-  
+  p {
+    text-align: center;
+  }
+  @media screen and (min-width: 767px) {
+    max-width: 1080px;
+    top:0@;
+    margin: 0 auto;
+  }
+}
+
+/* === SECTION EXPLORATION ========================================= */
+#exploration {
+  display: grid;
+  place-items: center;
+  background-color: colors.$background-exploration;
+
+  p {
+    text-align: center;
+  }
+}

@@ -37,7 +37,6 @@
 // NEW =============================== By Nepha ================2023==//
 @mixin buttonNew($start, $end) {
   background: linear-gradient(175deg, $start 0%, $end 100%);
-
 }
 //refaire le mixin
 .new {
@@ -45,29 +44,29 @@
   display: block;
   position: absolute;
   width: 80px;
-  right:15px;
+  right: 15px;
   text-align: center;
   top: 15px;
   z-index: 10;
   padding: 10px;
-  background-color: #99E2D0; /* Vert clair avec un peu de transparence */
+  background-color: #99e2d0; /* Vert clair avec un peu de transparence */
   border-radius: 3px;
   padding: 5px 10px; /* Espace intérieur autour du texte */
   color: #008766;
-
 }
 // LIST WIZARD ======================= By Nepha ================2023==//
 .listWizard {
   display: flex;
   flex-direction: column;
   list-style-type: none;
- 
+
   padding: 0px;
   margin: 20px;
   li {
     display: flex;
-    align-items: center;
-    height: 30px;   
+    flex: 1 0 0;
+    align-items: end;
+    height: 30px;
     padding: 30px;
     margin: 5px 10px;
 
@@ -75,18 +74,21 @@
     width: 300px;
     background-color: colors.$backgroundGlobal;
     border-radius: 20px;
-    @include buttonShadow(colors.$buttonShadowColor, colors.$buttonShadowValues);
+    @include buttonShadow(
+      colors.$buttonShadowColor,
+      colors.$buttonShadowValues
+    );
 
-    span{
-        display: block;
-        color: colors.$buttonTextColor;
-        background-color: colors.$backgroundGlobalElement;
-        text-align: center;
-        padding: 3px;
-        min-height: 25px;
-        min-width: 25px;
-        border-radius: 50%;
-        margin-left: -43px;
+    span {
+      display: block;
+      color: colors.$buttonTextColor;
+      background-color: colors.$backgroundGlobalElement;
+      text-align: center;
+      padding: 3px;
+      min-height: 25px;
+      min-width: 25px;
+      border-radius: 50%;
+      margin-left: -43px;
     }
 
     img {
@@ -100,37 +102,47 @@
   display: flex;
   flex-direction: column;
   list-style-type: none;
- 
+  max-width: 50%;
   padding: 0px;
   margin: 20px;
   li {
     display: flex;
-    align-items: center;
-    height: 30px;   
+    align-items: flex-start;
+    height: 30px;
     padding: 30px;
     margin: 5px 10px;
-    
+    flex-direction: column;
     max-width: 350px;
     width: 300px;
     background-color: colors.$backgroundGlobal;
     border-radius: 20px;
-    @include buttonShadow(colors.$buttonShadowColor, colors.$buttonShadowValues);
+    @include buttonShadow(
+      colors.$buttonShadowColor,
+      colors.$buttonShadowValues
+    );
 
-    span{
-        display: block;
-     
+    div {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      align-content: space-between;
+      span {
+        display: flex;
+        flex-direction: column;
+
         &[itemprop="name"] {
           font-weight: bold;
           color: blue;
-      }
-        &[itemprop="description"]{
+        }
+        &[itemprop="description"] {
           color: green;
         }
-        &[itemprop="offers"]{
-          color : magenta;
+        &[itemprop="offers"] {
+          color: magenta;
+          //display: flex;
+          //align-content: end;
         }
-
-
+      }
     }
 
     img {
@@ -139,6 +151,5 @@
     }
   }
 }
-
 
 // Because my team love 🫶 camelCase 🐫 ===================== Neah ===//

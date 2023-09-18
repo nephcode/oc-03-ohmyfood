@@ -10,13 +10,34 @@ p {
   font-family: 1rem;
 }
 
+/* === BANNER ============================================= */
+#banner {
+  width: 100%;
+  position: sticky;
+}
+#banner img {
+  aspect-ratio: 2.618;
+  object-fit: cover;
+  width: 100%;
+}
+@media screen and (min-width: 767px) {
+  #banner {
+    height: 200px;
+  }
+}
+
 /* === MAIN ============================================= */
-#main {
+main {
   display: grid;
   place-items: center;
   background-color: #f6f6f6;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  position: relative;
+  top: -50px;
+  z-index: 20;
 }
-#main h1 {
+main h1 {
   font-family: "Shrikhand";
   font-size: 24px;
   font-style: normal;
@@ -24,8 +45,15 @@ p {
   line-height: normal;
   text-align: center;
 }
-#main p {
+main p {
   text-align: center;
+}
+@media screen and (min-width: 767px) {
+  main {
+    max-width: 1080px;
+    top: 0;
+    margin: 0 auto;
+  }
 }
 
 /* === SECTION EXPLORATION ========================================= */
@@ -41,7 +69,7 @@ p {
 .buttonValid {
   color: #ffffff;
   background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
-  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.5);
+  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.2);
   padding: 20px;
   margin: 10px;
   border-radius: 50px;
@@ -61,7 +89,7 @@ p {
   top: 15px;
   z-index: 10;
   padding: 10px;
-  background-color: #99E2D0; /* Vert clair avec un peu de transparence */
+  background-color: #99e2d0; /* Vert clair avec un peu de transparence */
   border-radius: 3px;
   padding: 5px 10px; /* Espace intérieur autour du texte */
   color: #008766;
@@ -76,7 +104,8 @@ p {
 }
 .listWizard li {
   display: flex;
-  align-items: center;
+  flex: 1 0 0;
+  align-items: end;
   height: 30px;
   padding: 30px;
   margin: 5px 10px;
@@ -84,7 +113,7 @@ p {
   width: 300px;
   background-color: #ffffff;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.5);
+  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.2);
 }
 .listWizard li span {
   display: block;
@@ -106,32 +135,41 @@ p {
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  max-width: 50%;
   padding: 0px;
   margin: 20px;
 }
 .listDishes li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   height: 30px;
   padding: 30px;
   margin: 5px 10px;
+  flex-direction: column;
   max-width: 350px;
   width: 300px;
   background-color: #ffffff;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.5);
+  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.2);
 }
-.listDishes li span {
-  display: block;
+.listDishes li div {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  align-content: space-between;
 }
-.listDishes li span[itemprop=name] {
+.listDishes li div span {
+  display: flex;
+  flex-direction: column;
+}
+.listDishes li div span[itemprop=name] {
   font-weight: bold;
   color: blue;
 }
-.listDishes li span[itemprop=description] {
+.listDishes li div span[itemprop=description] {
   color: green;
 }
-.listDishes li span[itemprop=offers] {
+.listDishes li div span[itemprop=offers] {
   color: magenta;
 }
 .listDishes li img {
@@ -218,14 +256,14 @@ footer {
   font-size: 1rem;
   padding: 25px;
 }
-footer nav lu li {
+footer nav li {
   list-style-type: none;
   padding-top: 10px;
 }
-footer nav lu li img {
+footer nav li img {
   padding-right: 10px;
 }
-footer nav lu li img + a {
+footer nav li img + a {
   font-weight: 500;
 }
 footer nav a {
