@@ -59,20 +59,16 @@
   display: flex;
   flex-direction: column;
   list-style-type: none;
-
   padding: 0px;
-  margin: 20px;
+  margin: 0px 6px;
   li {
     display: flex;
     flex: 1 0 0;
-    align-items: end;
+    align-items: center;
     height: 30px;
     padding: 30px;
     margin: 5px 10px;
-
-    max-width: 350px;
-    width: 300px;
-    background-color: colors.$backgroundGlobal;
+    background-color: colors.$background-exploration;
     border-radius: 20px;
     @include buttonShadow(
       colors.$buttonShadowColor,
@@ -102,18 +98,22 @@
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  max-width: 50%;
+  //max-width: 50%;
   padding: 0px;
   margin: 20px;
+  
+  
+
   li {
     display: flex;
-    align-items: flex-start;
-    height: 30px;
-    padding: 30px;
-    margin: 5px 10px;
-    flex-direction: column;
-    max-width: 350px;
-    width: 300px;
+    align-items: flex-end;
+    justify-content: space-between;
+    //height: 30px;
+    margin: 0.7vh;
+    padding: 3%;
+    flex-direction: row;
+    //max-width: 350px;
+    //width: 300px;
     background-color: colors.$backgroundGlobal;
     border-radius: 20px;
     @include buttonShadow(
@@ -126,29 +126,42 @@
       flex-direction: column;
       flex-shrink: 1;
       align-content: space-between;
+      
+      &:nth-child(2) { // Cible le deuxième div selon votre structure actuelle
+       // order: 3; // Assurez-vous que c'est la valeur la plus élevée parmi les divs pour le pousser vers la fin
+        justify-content: flex-end; // aligne horizontalement à la fin (droite)
+        align-items: flex-end;     // aligne verticalement à la fin (bas)
+      }
+      
       span {
         display: flex;
-        flex-direction: column;
-
+        
         &[itemprop="name"] {
           font-weight: bold;
-          color: blue;
+          
         }
         &[itemprop="description"] {
-          color: green;
+          font-weight: lighter;
+          white-space: nowrap;
+          overflow-wrap: break-word;
+          font-size: 0.8rem;
+          
         }
-        &[itemprop="offers"] {
-          color: magenta;
-          //display: flex;
-          //align-content: end;
+
+       
+        &[itemprop="offers"]{
+          
+          display: flex;
+          align-content: end;
+          align-items: end;
         }
       }
     }
-
+/*
     img {
       height: 22px;
       padding: 0px 15px;
-    }
+    }*/
   }
 }
 

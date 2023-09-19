@@ -44,18 +44,16 @@ p {
   flex-direction: column;
   list-style-type: none;
   padding: 0px;
-  margin: 20px;
+  margin: 0px 6px;
 }
 .listWizard li {
   display: flex;
   flex: 1 0 0;
-  align-items: end;
+  align-items: center;
   height: 30px;
   padding: 30px;
   margin: 5px 10px;
-  max-width: 350px;
-  width: 300px;
-  background-color: #ffffff;
+  background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.2);
 }
@@ -79,22 +77,24 @@ p {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  max-width: 50%;
   padding: 0px;
   margin: 20px;
 }
 .listDishes li {
   display: flex;
-  align-items: flex-start;
-  height: 30px;
-  padding: 30px;
-  margin: 5px 10px;
-  flex-direction: column;
-  max-width: 350px;
-  width: 300px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0.7vh;
+  padding: 3%;
+  flex-direction: row;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.2);
+  /*
+      img {
+        height: 22px;
+        padding: 0px 15px;
+      }*/
 }
 .listDishes li div {
   display: flex;
@@ -102,23 +102,26 @@ p {
   flex-shrink: 1;
   align-content: space-between;
 }
+.listDishes li div:nth-child(2) {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 .listDishes li div span {
   display: flex;
-  flex-direction: column;
 }
 .listDishes li div span[itemprop=name] {
   font-weight: bold;
-  color: blue;
 }
 .listDishes li div span[itemprop=description] {
-  color: green;
+  font-weight: lighter;
+  white-space: nowrap;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
 }
 .listDishes li div span[itemprop=offers] {
-  color: magenta;
-}
-.listDishes li img {
-  height: 22px;
-  padding: 0px 15px;
+  display: flex;
+  align-content: end;
+  align-items: end;
 }
 
 .card {
@@ -183,12 +186,18 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 2 fr);
   gap: 20px;
+  place-items: center;
   background-color: white;
+  min-height: 60px;
 }
 header .logo {
-  justify-self: center;
-  width: 200px;
+  place-items: center;
   padding: 20px;
+}
+@media screen and (min-width: 767px) {
+  header {
+    min-height: 90px;
+  }
 }
 
 :root {
@@ -233,6 +242,8 @@ header .logo {
 /* === SECTION FONCTIONNEMENT ====================================== */
 #fonctionnement {
   background-color: #ffffff;
+  width: 100%;
+  padding: 20px 10px;
 }
 #fonctionnement h2 {
   font-style: normal;
@@ -243,15 +254,22 @@ header .logo {
 }
 @media screen and (min-width: 767px) {
   #fonctionnement {
-    max-width: 1080px;
+    width: 100%;
     margin: 0 auto;
+  }
+  #fonctionnement h2 {
+    max-width: 1080px;
+    margin: 5px auto 10px;
   }
   #fonctionnement .listWizard {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    max-width: 1024px;
+    margin: 0px auto;
   }
   #fonctionnement .listWizard li {
-    max-width: 250px;
+    max-width: 30%;
   }
 }
 
@@ -275,7 +293,7 @@ header .logo {
 }
 @media screen and (min-width: 767px) {
   #restaurant div {
-    max-width: 1024px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 0px 0vw 20px;
     display: grid;

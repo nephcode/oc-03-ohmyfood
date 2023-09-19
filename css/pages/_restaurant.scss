@@ -5,12 +5,29 @@
 @use "../base/typo";
 @use "sass:math";
 
+/* === SUR-CHARGE HEADER =========================================== */
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  place-items: center;
+  background-color: white;
+  min-height: 60px;
+  & .logo {
+    place-items: center;
+    padding: 20px;
+  }
+   & nav {
+    place-items: center;
+
+  }
+}
 /* === BANNER ============================================= */
 #banner {
   width: 100%;
-  
+
   $bannerRatio: math.div(2.618, 1);
- // z-index: -1;
+  // z-index: -1;
   position: sticky;
   img {
     aspect-ratio: $bannerRatio;
@@ -20,12 +37,12 @@
   @media screen and (min-width: 767px) {
     height: 200px;
   }
-
 }
 
 /* === MAIN ============================================= */
 main {
   display: grid;
+  width: 100%;
   place-items: center;
   background-color: colors.$background-exploration;
   border-top-right-radius: 25px;
@@ -46,9 +63,44 @@ main {
     text-align: center;
   }
   @media screen and (min-width: 767px) {
-    max-width: 1080px;
-    top:0@;
+    max-width: 1024px;
+    top: 0;
     margin: 0 auto;
+    /*
+    .listDishes{
+      width: 50%;
+    }
+    */
+  }
+}
+
+/* === SECTION EXPLORATION ========================================= */
+#menu {
+  /*& > div {
+  display: grid;
+  justify-items: stretch;
+  max-width: 70%;
+  background-color: colors.$background-exploration;
+*/
+  h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -5;
+      left: 0; // Ajustez si nécessaire
+      width: 25px;
+      height: 2px;
+      background-color: colors.$action-primary;
+    }
+  }
+
+  p {
+    text-align: center;
   }
 }
 
