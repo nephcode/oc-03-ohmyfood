@@ -24,7 +24,7 @@ header .logo {
   padding: 20px;
 }
 header nav {
-  place-items: center;
+  justify-self: start;
 }
 
 /* === BANNER ============================================= */
@@ -45,9 +45,10 @@ header nav {
 
 /* === MAIN ============================================= */
 main {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  place-items: center;
+  justify-content: center;
   background-color: #f6f6f6;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
@@ -71,24 +72,17 @@ main p {
     max-width: 1024px;
     top: 0;
     margin: 0 auto;
-    /*
-    .listDishes{
-      width: 50%;
-    }
-    */
   }
 }
 
-/* === SECTION EXPLORATION ========================================= */
+/* === SECTION MENU ========================================= */
 #menu {
-  /*& > div {
-    display: grid;
-    justify-items: stretch;
-    max-width: 70%;
-    background-color: colors.$background-exploration;
-  */
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
 }
 #menu h2 {
+  margin: 0.7vh;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -104,17 +98,32 @@ main p {
   height: 2px;
   background-color: #99e2d0;
 }
+#menu h2 .laNephEpicurienne {
+  display: grid;
+  width: 95%;
+  align-items: center;
+}
 #menu p {
   text-align: center;
 }
+@media screen and (min-width: 767px) {
+  #menu {
+    justify-content: center;
+  }
+  #menu .laNephEpicurienne {
+    justify-items: center;
+    padding: 0 auto;
+    width: 50%;
+  }
+}
 
-/* === SECTION EXPLORATION ========================================= */
-#exploration {
+/* === SECTION COMMANDE ========================================= */
+#commande {
   display: grid;
   place-items: center;
   background-color: #f6f6f6;
 }
-#exploration p {
+#commande p {
   text-align: center;
 }
 
@@ -145,6 +154,10 @@ main p {
   border-radius: 3px;
   padding: 5px 10px; /* Espace intérieur autour du texte */
   color: #008766;
+}
+
+.JoliCoeur {
+  width: 30px;
 }
 
 .listWizard {
@@ -186,7 +199,6 @@ main p {
   flex-direction: column;
   list-style-type: none;
   padding: 0px;
-  margin: 20px;
 }
 .listDishes li {
   display: flex;
@@ -199,10 +211,10 @@ main p {
   border-radius: 20px;
   box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.2);
   /*
-      img {
-        height: 22px;
-        padding: 0px 15px;
-      }*/
+  img {
+    height: 22px;
+    padding: 0px 15px;
+  }*/
 }
 .listDishes li div {
   display: flex;
@@ -301,6 +313,9 @@ header {
 header .logo {
   place-items: center;
   padding: 20px;
+}
+header nav {
+  justify-self: start;
 }
 @media screen and (min-width: 767px) {
   header {

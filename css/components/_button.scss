@@ -54,6 +54,13 @@
   padding: 5px 10px; /* Espace intérieur autour du texte */
   color: #008766;
 }
+
+// JoliCoeur =============================== By Neah ================2023==//
+
+.JoliCoeur {
+  width: 30px;
+}
+
 // LIST WIZARD ======================= By Nepha ================2023==//
 .listWizard {
   display: flex;
@@ -100,9 +107,7 @@
   list-style-type: none;
   //max-width: 50%;
   padding: 0px;
-  margin: 20px;
-  
-  
+  //margin: 20px;
 
   li {
     display: flex;
@@ -126,38 +131,35 @@
       flex-direction: column;
       flex-shrink: 1;
       align-content: space-between;
-      
-      &:nth-child(2) { // Cible le deuxième div selon votre structure actuelle
-       // order: 3; // Assurez-vous que c'est la valeur la plus élevée parmi les divs pour le pousser vers la fin
+
+      &:nth-child(2) {
+        // Cible le deuxième div selon votre structure actuelle
+        // order: 3; // Assurez-vous que c'est la valeur la plus élevée parmi les divs pour le pousser vers la fin
         justify-content: flex-end; // aligne horizontalement à la fin (droite)
-        align-items: flex-end;     // aligne verticalement à la fin (bas)
+        align-items: flex-end; // aligne verticalement à la fin (bas)
       }
-      
+
       span {
         display: flex;
-        
+
         &[itemprop="name"] {
           font-weight: bold;
-          
         }
         &[itemprop="description"] {
           font-weight: lighter;
           white-space: nowrap;
           overflow-wrap: break-word;
           font-size: 0.8rem;
-          
         }
 
-       
-        &[itemprop="offers"]{
-          
+        &[itemprop="offers"] {
           display: flex;
           align-content: end;
           align-items: end;
         }
       }
     }
-/*
+    /*
     img {
       height: 22px;
       padding: 0px 15px;

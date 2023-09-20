@@ -13,6 +13,10 @@ header {
     place-items: center;
     padding: 20px;
   }
+  nav {
+    justify-self: start;
+
+  }
   @media screen and (min-width: 767px) {
     min-height: 90px;
   
