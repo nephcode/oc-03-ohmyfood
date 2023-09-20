@@ -99,9 +99,10 @@ main p {
   background-color: #99e2d0;
 }
 #menu h2 .laNephEpicurienne {
-  display: grid;
+  display: flex;
   width: 95%;
-  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 #menu p {
   text-align: center;
@@ -111,7 +112,7 @@ main p {
     justify-content: center;
   }
   #menu .laNephEpicurienne {
-    justify-items: center;
+    justify-content: center;
     padding: 0 auto;
     width: 50%;
   }

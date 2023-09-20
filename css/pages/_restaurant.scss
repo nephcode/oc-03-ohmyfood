@@ -93,9 +93,10 @@ main {
       background-color: colors.$action-primary;
     }
     .laNephEpicurienne {
-      display: grid;
+      display: flex;
       width: 95%;
-      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
     }
 
    
@@ -108,7 +109,7 @@ main {
     justify-content: center;
 
     .laNephEpicurienne {
-      justify-items: center;
+      justify-content: center;
       padding: 0 auto;
       width: 50%;
     
