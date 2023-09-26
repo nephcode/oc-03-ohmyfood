@@ -39,8 +39,22 @@ p {
   color: #008766;
 }
 
+.fav {
+  display: block;
+  position: absolute;
+  width: 25px;
+  right: 15px;
+  text-align: center;
+  bottom: 15px;
+  z-index: 10;
+  padding: 10px;
+  /* Vert clair avec un peu de transparence */
+  border-radius: 3px;
+  padding: 5px 10px; /* Espace intérieur autour du texte */
+}
+
 .JoliCoeur {
-  width: 30px;
+  width: 25px;
 }
 
 .listWizard {
@@ -171,6 +185,21 @@ p {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
+.card .icone {
+  display: block;
+  position: absolute;
+  right: 100px;
+  height: 0.6em;
+  width: 25px;
+  fill: currentColor;
+  text-align: left;
+  bottom: 35px;
+  z-index: 10;
+}
+.card .icone-coeur {
+  height: 0.6em;
+  color: red;
+}
 
 * {
   /* Rules */
@@ -218,6 +247,7 @@ header nav {
   place-items: center;
   gap: 20px;
   background-color: #eaeaea;
+  box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.2);
 }
 #location p {
   display: flex;
@@ -225,6 +255,11 @@ header nav {
 }
 #location p img {
   padding-right: 10px;
+}
+@media screen and (min-width: 767px) {
+  #location {
+    box-shadow: none;
+  }
 }
 
 /* === SECTION EXPLORATION ========================================= */

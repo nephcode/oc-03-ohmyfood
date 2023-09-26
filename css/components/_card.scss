@@ -1,8 +1,8 @@
 //===============================OhMyF°>°D= ======================//
 // CARD ============================================ =============//
 //================================================================//
-@use '../base/colors';
-@use 'sass:math';
+@use "../base/colors";
+@use "sass:math";
 
 $imgRatio: math.div(16, 9);
 $radiusCard: 20px;
@@ -12,7 +12,7 @@ $radiusCard: 20px;
   align-self: center;
   width: 90%;
   flex-basis: 90%;
-  margin-bottom:15px ;
+  margin-bottom: 15px;
   position: relative;
   //--------------
   a {
@@ -47,8 +47,6 @@ $radiusCard: 20px;
     height: auto;
   }
 
-
-
   img {
     aspect-ratio: $imgRatio;
     object-fit: cover;
@@ -57,5 +55,23 @@ $radiusCard: 20px;
     border-top-left-radius: $radiusCard;
     //padding: 0.2rem;
     //---------------
+  }
+
+  .icone {
+    display: block;
+    position: absolute;
+    right: 100px;
+    height: 0.6em;
+    width: 25px;
+    fill: currentColor;
+    text-align: left;
+    bottom: 35px;
+    z-index: 10;
+
+
+    &-coeur {
+      height: 0.6em;
+      color: red;
+    }
   }
 }

@@ -76,6 +76,15 @@ main {
   display: flex;
   justify-items: center;
   flex-direction: column;
+
+  .titreEpicurienne{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    justify-items: start;
+  }
   h2 {
     margin: 0.7vh;
     font-weight: 300;
@@ -112,9 +121,14 @@ main {
       justify-content: center;
       padding: 0 auto;
       width: 50%;
+      margin: 0 auto;
     
     }
-  
+    .titreEpicurienne{
+      width: 35%;
+      justify-items: center;
+      margin: 0 auto;
+    }
   }
 }
 

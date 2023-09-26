@@ -55,11 +55,31 @@
   color: #008766;
 }
 
-// JoliCoeur =============================== By Neah ================2023==//
+// JoliCoeur ========================== By Neah ================2023==//
+
+.fav {
+  //rules css
+  display: block;
+  position: absolute;
+  width: 25px;
+  right: 15px;
+  text-align: center;
+  bottom: 15px;
+  z-index: 10;
+  padding: 10px;
+  /* Vert clair avec un peu de transparence */
+  border-radius: 3px;
+  padding: 5px 10px; /* Espace intérieur autour du texte */
+  //color: #008766;
+}
+
 
 .JoliCoeur {
-  width: 30px;
+  width: 25px;
 }
+
+
+
 
 // LIST WIZARD ======================= By Nepha ================2023==//
 .listWizard {
