@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 15 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <path id="mobile-screen-button" d="M12.049,0.543L2.936,0.543C1.857,0.543 0.983,1.379 0.983,2.409L0.983,18.58C0.983,19.61 1.857,20.446 2.936,20.446L12.049,20.446C13.127,20.446 14.002,19.61 14.002,18.58L14.002,2.409C14.002,1.379 13.127,0.543 12.049,0.543ZM7.492,19.202C6.772,19.202 6.19,18.646 6.19,17.958C6.19,17.27 6.772,16.714 7.492,16.714C8.212,16.714 8.794,17.27 8.794,17.958C8.794,18.646 8.212,19.202 7.492,19.202ZM12.049,15.004C12.049,15.26 11.829,15.47 11.561,15.47L3.424,15.47C3.155,15.47 2.936,15.26 2.936,15.004L2.936,2.875C2.936,2.619 3.155,2.409 3.424,2.409L11.561,2.409C11.829,2.409 12.049,2.619 12.049,2.875L12.049,15.004Z" style="fill:rgb(126,126,126);fill-rule:nonzero;"/>
+</svg>

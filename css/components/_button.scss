@@ -1,0 +1,190 @@
+//============================================= OC-03 OHMYF°_°D ======//
+// BUTTON ============================================================//
+//==================================== By Nepha ================2023==//
+@use "../base/colors";
+
+// VALID ============================= By Nepha ================2023==//
+@mixin buttonGradient($start, $end) {
+  background: linear-gradient(175deg, $start 0%, $end 100%);
+}
+// Définition d'un mixin pour l'ombre
+@mixin buttonShadow($color, $values) {
+  box-shadow: $values $color;
+}
+
+.buttonValid {
+  color: colors.$buttonTextColor;
+  //background-color mixin
+  @include buttonGradient(
+    colors.$buttonGradientStart,
+    colors.$buttonGradientEnd
+  );
+  //box-shadow mixin
+  @include buttonShadow(colors.$buttonShadowColor, colors.$buttonShadowValues);
+  //rules css
+  padding: 20px;
+  margin: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+
+  //:hover, :active nesting anination
+}
+// ADD =============================== By Nepha ================2023==//
+.addFavorite {
+  background-color: colors.$heart-primary;
+}
+
+// NEW =============================== By Nepha ================2023==//
+@mixin buttonNew($start, $end) {
+  background: linear-gradient(175deg, $start 0%, $end 100%);
+}
+//refaire le mixin
+.new {
+  //rules css
+  display: block;
+  position: absolute;
+  width: 80px;
+  right: 15px;
+  text-align: center;
+  top: 15px;
+  z-index: 10;
+  padding: 10px;
+  background-color: #99e2d0; /* Vert clair avec un peu de transparence */
+  border-radius: 3px;
+  padding: 5px 10px; /* Espace intérieur autour du texte */
+  color: #008766;
+}
+
+// JoliCoeur ========================== By Neah ================2023==//
+
+.fav {
+  //rules css
+  display: block;
+  position: absolute;
+  width: 25px;
+  right: 15px;
+  text-align: center;
+  bottom: 15px;
+  z-index: 10;
+  padding: 10px;
+  /* Vert clair avec un peu de transparence */
+  border-radius: 3px;
+  padding: 5px 10px; /* Espace intérieur autour du texte */
+  //color: #008766;
+}
+
+
+.JoliCoeur {
+  width: 25px;
+}
+
+
+
+
+// LIST WIZARD ======================= By Nepha ================2023==//
+.listWizard {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px 6px;
+  li {
+    display: flex;
+    flex: 1 0 0;
+    align-items: center;
+    height: 30px;
+    padding: 30px;
+    margin: 5px 10px;
+    background-color: colors.$background-exploration;
+    border-radius: 20px;
+    @include buttonShadow(
+      colors.$buttonShadowColor,
+      colors.$buttonShadowValues
+    );
+
+    span {
+      display: block;
+      color: colors.$buttonTextColor;
+      background-color: colors.$backgroundGlobalElement;
+      text-align: center;
+      padding: 3px;
+      min-height: 25px;
+      min-width: 25px;
+      border-radius: 50%;
+      margin-left: -43px;
+    }
+
+    img {
+      height: 22px;
+      padding: 0px 15px;
+    }
+  }
+}
+// LIST WIZARD ======================= By Nepha ================2023==//
+.listDishes {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  //max-width: 50%;
+  padding: 0px;
+  //margin: 20px;
+
+  li {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    //height: 30px;
+    margin: 0.7vh;
+    padding: 3%;
+    flex-direction: row;
+    //max-width: 350px;
+    //width: 300px;
+    background-color: colors.$backgroundGlobal;
+    border-radius: 20px;
+    @include buttonShadow(
+      colors.$buttonShadowColor,
+      colors.$buttonShadowValues
+    );
+
+    div {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      align-content: space-between;
+
+      &:nth-child(2) {
+        // Cible le deuxième div selon votre structure actuelle
+        // order: 3; // Assurez-vous que c'est la valeur la plus élevée parmi les divs pour le pousser vers la fin
+        justify-content: flex-end; // aligne horizontalement à la fin (droite)
+        align-items: flex-end; // aligne verticalement à la fin (bas)
+      }
+
+      span {
+        display: flex;
+
+        &[itemprop="name"] {
+          font-weight: bold;
+        }
+        &[itemprop="description"] {
+          font-weight: lighter;
+          white-space: nowrap;
+          overflow-wrap: break-word;
+          font-size: 0.8rem;
+        }
+
+        &[itemprop="offers"] {
+          display: flex;
+          align-content: end;
+          align-items: end;
+        }
+      }
+    }
+    /*
+    img {
+      height: 22px;
+      padding: 0px 15px;
+    }*/
+  }
+}
+
+// Because my team love 🫶 camelCase 🐫 ===================== Neah ===//

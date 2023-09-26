@@ -1,0 +1,144 @@
+//============================================= OC-03 OHMYFOOD =======//
+// GLOBAL SCSS VAR & RULES ===========================================//
+//==============================================================2023==//
+@use "../base/colors";
+@use "../base/typo";
+@use "sass:math";
+
+/* === SUR-CHARGE HEADER =========================================== */
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  place-items: center;
+  background-color: white;
+  min-height: 60px;
+  & .logo {
+    place-items: center;
+    padding: 20px;
+  }
+  nav {
+    justify-self: start;
+  }
+}
+/* === BANNER ============================================= */
+#banner {
+  width: 100%;
+
+  $bannerRatio: math.div(2.618, 1);
+  // z-index: -1;
+  position: sticky;
+  img {
+    aspect-ratio: $bannerRatio;
+    object-fit: cover;
+    width: 100%;
+  }
+  @media screen and (min-width: 767px) {
+    height: 200px;
+  }
+}
+
+/* === MAIN ============================================= */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  background-color: colors.$background-exploration;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  position: relative;
+  top: -50px;
+  z-index: 20;
+
+  h1 {
+    font-family: "Shrikhand";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+  @media screen and (min-width: 767px) {
+    max-width: 1024px;
+    top: 0;
+    margin: 0 auto;
+   // place-items: stretch;
+  }
+}
+
+/* === SECTION MENU ========================================= */
+#menu {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+
+  .titreEpicurienne{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    justify-items: start;
+  }
+  h2 {
+    margin: 0.7vh;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -5;
+      left: 0; // Ajustez si nécessaire
+      width: 25px;
+      height: 2px;
+      background-color: colors.$action-primary;
+    }
+    .laNephEpicurienne {
+      display: flex;
+      width: 95%;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+   
+  }
+
+  p {
+    text-align: center;
+  }
+  @media screen and (min-width: 767px) {
+    justify-content: center;
+
+    .laNephEpicurienne {
+      justify-content: center;
+      padding: 0 auto;
+      width: 50%;
+      margin: 0 auto;
+    
+    }
+    .titreEpicurienne{
+      width: 35%;
+      justify-items: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+/* === SECTION COMMANDE ========================================= */
+#commande {
+  display: grid;
+  place-items: center;
+  background-color: colors.$background-exploration;
+
+  p {
+    text-align: center;
+  }
+}

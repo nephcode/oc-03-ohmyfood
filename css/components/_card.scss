@@ -1,0 +1,77 @@
+//===============================OhMyF°>°D= ======================//
+// CARD ============================================ =============//
+//================================================================//
+@use "../base/colors";
+@use "sass:math";
+
+$imgRatio: math.div(16, 9);
+$radiusCard: 20px;
+
+.card {
+  display: flex;
+  align-self: center;
+  width: 90%;
+  flex-basis: 90%;
+  margin-bottom: 15px;
+  position: relative;
+  //--------------
+  a {
+    background-color: colors.$backgroundGlobal;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+    gap: 0.1rem;
+    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
+    border-radius: $radiusCard;
+    border: 0px;
+    text-decoration: none;
+    color: black;
+    //-------------
+    &:active {
+      color: black;
+    }
+    &:visited {
+      color: black;
+    }
+  }
+  //--------------
+  h3 {
+    margin: 5px 0px 0px;
+    padding: 0px 10px 0px 20px;
+    height: auto;
+  }
+  address {
+    margin: 0px 0px 10px;
+    padding: 0px 10px 0px 20px;
+    height: auto;
+  }
+
+  img {
+    aspect-ratio: $imgRatio;
+    object-fit: cover;
+    width: 100%;
+    border-top-right-radius: $radiusCard;
+    border-top-left-radius: $radiusCard;
+    //padding: 0.2rem;
+    //---------------
+  }
+
+  .icone {
+    display: block;
+    position: absolute;
+    right: 100px;
+    height: 0.6em;
+    width: 25px;
+    fill: currentColor;
+    text-align: left;
+    bottom: 35px;
+    z-index: 10;
+
+
+    &-coeur {
+      height: 0.6em;
+      color: red;
+    }
+  }
+}

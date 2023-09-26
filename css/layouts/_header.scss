@@ -1,0 +1,24 @@
+//=========================================== OhMyF°_°D ==============//
+// HEADER ============================================================//
+//====================================================================//
+
+header {
+  display: grid;
+  grid-template-columns: repeat(3, 2 fr);
+  gap: 20px;
+  place-items: center;
+  background-color: white;
+  min-height: 60px;
+  & .logo {
+    place-items: center;
+    padding: 20px;
+  }
+  nav {
+    justify-self: start;
+
+  }
+  @media screen and (min-width: 767px) {
+    min-height: 90px;
+  
+  }
+}

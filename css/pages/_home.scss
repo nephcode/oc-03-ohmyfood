@@ -1,0 +1,140 @@
+//============================================= OC-03 OHMYFOOD =======//
+// GLOBAL SCSS VAR & RULES ===========================================//
+//==============================================================2023==//
+@use "../base/colors";
+@use "sass:math";
+
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: auto;
+}
+
+/* === SECTION LOCATION ============================================ */
+#location {
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  background-color: colors.$background-location;
+  box-shadow: inset 0px 3px 3px rgba(0,0,0,0.2);
+
+  p {
+    display: flex;
+    align-items: center;
+
+    img {
+      padding-right: 10px;
+    }
+  }
+  @media screen and (min-width: 767px) {
+  box-shadow: none;
+  }
+}
+/* === SECTION EXPLORATION ========================================= */
+#exploration {
+  display: grid;
+  place-items: center;
+  background-color: colors.$background-exploration;
+
+  h1 {
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+/* === SECTION FONCTIONNEMENT ====================================== */
+#fonctionnement {
+  background-color: colors.$backgroundGlobal;
+  width: 100%;
+  padding: 20px 10px;
+
+  h2 {
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+    margin: 10px 0px 0px 10px;
+  }
+  @media screen and (min-width: 767px) {
+    width: 100%;
+    margin: 0 auto;
+
+    h2 {
+      max-width: 1080px;
+      margin: 5px auto 10px;
+    }
+
+    .listWizard {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      max-width: 1024px;
+      margin: 0px auto;
+
+      li {
+        max-width: 30%;
+      }
+    }
+  }
+}
+
+/* === SECTION RESTAURANT ========================================== */
+#restaurant {
+  background-color: colors.$background-exploration;
+  div {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  h2 {
+    width: 100%;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+    margin: 10px 0px 10px 10px;
+    grid-area: title;
+  }
+  @media screen and (min-width: 767px) {
+    div {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0px 0vw 20px;
+      display: grid;
+      place-items: center;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1vw;
+      grid-template-areas:
+        "title title"
+        "card1 card2"
+        "card3 card4";
+    }
+
+    .card {
+      $imgRatio: math.div(2.618, 1);
+
+      img {
+        aspect-ratio: $imgRatio;
+      }
+    }
+    @for $i from 1 through 4 {
+      .card:nth-child(#{$i + 1}) {
+        // +1 car le h2 est le premier enfant
+        grid-area: card#{$i};
+      }
+    }
+  }
+}
+
+//============================================= OC-03 OHMYFOOD =======//
+// LOCALIZE ==========================================================//
+//==============================================================2023==//
