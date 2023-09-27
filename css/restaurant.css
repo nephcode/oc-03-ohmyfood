@@ -151,6 +151,10 @@ main p {
   border-radius: 50px;
   text-decoration: none;
 }
+.buttonValid:hover, .buttonValid :active {
+  opacity: 0.8;
+  transition: opacity 250ms;
+}
 
 .addFavorite {
   background-color: #9747ff;
@@ -317,20 +321,52 @@ main p {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
+.card svg {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
 .card .icone {
   display: block;
   position: absolute;
-  right: 100px;
-  height: 0.6em;
+  right: 20px;
+  bottom: 15px;
+  height: 25px;
   width: 25px;
-  fill: currentColor;
-  text-align: left;
-  bottom: 35px;
+  fill: none;
+  stroke: currentColor;
   z-index: 10;
 }
-.card .icone-coeur {
-  height: 0.6em;
+.card .icone:hover {
+  opacity: 0.8;
+  transition: opacity 850ms;
   color: red;
+  fill: red;
+}
+
+svg {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+.icone {
+  display: block;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  opacity: 1;
+  height: 25px;
+  width: 25px;
+  fill: none;
+  stroke: currentColor;
+  z-index: 10;
+}
+.icone:hover {
+  opacity: 0.8;
+  transition: opacity 850ms;
+  color: #9747ff;
+  fill: #9747ff;
 }
 
 * {
@@ -344,6 +380,10 @@ html,
 body {
   margin: 0;
   background-color: #ffffff;
+}
+
+svg {
+  display: none;
 }
 
 header {
