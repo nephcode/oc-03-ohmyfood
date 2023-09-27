@@ -28,6 +28,10 @@
   text-decoration: none;
 
   //:hover, :active nesting anination
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 250ms;
+  }
 }
 // ADD =============================== By Nepha ================2023==//
 .addFavorite {
@@ -73,13 +77,9 @@
   //color: #008766;
 }
 
-
 .JoliCoeur {
   width: 25px;
 }
-
-
-
 
 // LIST WIZARD ======================= By Nepha ================2023==//
 .listWizard {

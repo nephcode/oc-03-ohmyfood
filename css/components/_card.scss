@@ -56,22 +56,28 @@ $radiusCard: 20px;
     //padding: 0.2rem;
     //---------------
   }
-
+  svg {
+    width: 25px;
+    height: 25px;
+    display: block;
+  }
   .icone {
     display: block;
     position: absolute;
-    right: 100px;
-    height: 0.6em;
+    right: 20px;
+    bottom: 15px;
+    //
+    height: 25px;
     width: 25px;
-    fill: currentColor;
-    text-align: left;
-    bottom: 35px;
+    fill: none;
+    stroke: currentColor;
     z-index: 10;
 
-
-    &-coeur {
-      height: 0.6em;
+    &:hover {
+      opacity: 0.8;
+      transition: opacity 850ms;
       color: red;
+      fill: red;
     }
   }
 }
