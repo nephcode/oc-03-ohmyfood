@@ -19,7 +19,7 @@ p {
   border-radius: 50px;
   text-decoration: none;
 }
-.buttonValid:hover {
+.buttonValid:hover, .buttonValid :active {
   opacity: 0.8;
   transition: opacity 250ms;
 }
@@ -233,8 +233,8 @@ svg {
 .icone:hover {
   opacity: 0.8;
   transition: opacity 850ms;
-  color: red;
-  fill: blue;
+  color: #9747ff;
+  fill: #9747ff;
 }
 
 * {

@@ -25,7 +25,7 @@ svg {
     &:hover {
       opacity: 0.8;
       transition: opacity 850ms;
-      color: red;
-      fill: blue;
+      color: colors.$heart-primary;
+      fill: colors.$heart-primary;
     }
   }
