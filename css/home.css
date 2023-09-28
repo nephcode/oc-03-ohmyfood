@@ -189,52 +189,42 @@ p {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
-.card svg {
-  width: 25px;
-  height: 25px;
-  display: block;
-}
-.card .icone {
-  display: block;
-  position: absolute;
-  right: 20px;
-  bottom: 15px;
-  height: 25px;
-  width: 25px;
-  fill: none;
-  stroke: currentColor;
-  z-index: 10;
-}
-.card .icone:hover {
-  opacity: 0.8;
-  transition: opacity 850ms;
-  color: red;
-  fill: red;
-}
 
+/*
 svg {
   width: 25px;
   height: 25px;
   display: block;
 }
-
-.icone {
-  display: block;
+*/
+.icoeur {
+  width: 25px;
+  height: 25px;
   position: absolute;
   right: 20px;
   bottom: 15px;
-  opacity: 1;
+}
+.icoeur svg {
+  display: block;
   height: 25px;
   width: 25px;
+  fill-opacity: 1;
   fill: none;
   stroke: currentColor;
+  stroke-dasharray: 1000;
   z-index: 10;
 }
-.icone:hover {
-  opacity: 0.8;
-  transition: opacity 850ms;
-  color: #9747ff;
+.icoeur svg:hover {
+  stroke: transparent;
   fill: #9747ff;
+}
+@keyframes animate-heart {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 * {

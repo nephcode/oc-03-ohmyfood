@@ -4,28 +4,54 @@
 @use "../base/colors";
 @use "sass:math";
 
-
+// Définition d'un mixin pour l'ombre
+@mixin CoeurGradient($color, $values) {
+  fill: $values $color;
+}
+/*
 svg {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+*/
+.icoeur {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+
+  svg {
     display: block;
-  }
-  .icone {
-    display: block;
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
-    opacity: 1;
     height: 25px;
     width: 25px;
+    fill-opacity: 1;
     fill: none;
     stroke: currentColor;
+    stroke-dasharray: 1000;
+    //stroke-dashoffset: 1000;
     z-index: 10;
-
+    //animation: animate 3s 0s linear alternate;
     &:hover {
-      opacity: 0.8;
-      transition: opacity 850ms;
-      color: colors.$heart-primary;
+      //opacity: 0.7;
+      //transition: opacity 850ms;
+      // color: colors.$heart-primary;
+      //stroke: blue;
+      stroke: transparent;
       fill: colors.$heart-primary;
+
+      @keyframes animate-heart {
+        0% {
+          stroke-dashoffset: 1000;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
     }
+
+    //fill: url(#CoeurGradient);
+    //@include CoeurGradient(colors.$buttonGradientStart, colors.$buttonGradientEnd )    ;
   }
+}
