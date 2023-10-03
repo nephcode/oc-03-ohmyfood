@@ -237,6 +237,25 @@ svg {
   fill: #9747ff;
 }
 
+.icone-title {
+  display: block;
+  position: relative;
+  right: 20px;
+  bottom: 15px;
+  opacity: 1;
+  height: 25px;
+  width: 25px;
+  fill: none;
+  stroke: currentColor;
+  z-index: 10;
+}
+.icone-title:hover {
+  opacity: 0.8;
+  transition: opacity 850ms;
+  color: #9747ff;
+  fill: #9747ff;
+}
+
 * {
   /* Rules */
   box-sizing: border-box;

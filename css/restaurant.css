@@ -369,6 +369,140 @@ svg {
   fill: #9747ff;
 }
 
+.icone-title {
+  display: block;
+  position: relative;
+  right: 20px;
+  bottom: 15px;
+  opacity: 1;
+  height: 25px;
+  width: 25px;
+  fill: none;
+  stroke: currentColor;
+  z-index: 10;
+}
+.icone-title:hover {
+  opacity: 0.8;
+  transition: opacity 850ms;
+  color: #9747ff;
+  fill: #9747ff;
+}
+
+svg {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+#check {
+  display: block;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  opacity: 1;
+  height: 25px;
+  width: 25px;
+  fill: none;
+  stroke: currentColor;
+  z-index: 10;
+}
+#check:hover {
+  opacity: 0.8;
+  transition: opacity 850ms;
+  color: #9747ff;
+  fill: #9747ff;
+}
+
+menu_anim {
+  color: aquamarine;
+}
+
+.listDishes {
+  overflow: hidden;
+}
+.listDishes li, .listDishes h2 {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+  animation: slide-up 1s ease forwards;
+}
+.listDishes li:nth-child(1), .listDishes h2:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.listDishes li:nth-child(2), .listDishes h2:nth-child(2) {
+  animation-delay: 1s;
+}
+.listDishes li:nth-child(3), .listDishes h2:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.listDishes li:nth-child(4), .listDishes h2:nth-child(4) {
+  animation-delay: 2s;
+}
+.listDishes li:nth-child(5), .listDishes h2:nth-child(5) {
+  animation-delay: 2.5s;
+}
+.listDishes li:nth-child(6), .listDishes h2:nth-child(6) {
+  animation-delay: 3s;
+}
+.listDishes li:nth-child(7), .listDishes h2:nth-child(7) {
+  animation-delay: 3.5s;
+}
+.listDishes li:nth-child(8), .listDishes h2:nth-child(8) {
+  animation-delay: 4s;
+}
+.listDishes li:nth-child(9), .listDishes h2:nth-child(9) {
+  animation-delay: 4.5s;
+}
+.listDishes li:nth-child(10), .listDishes h2:nth-child(10) {
+  animation-delay: 5s;
+}
+
+.laNephEpicurienne {
+  overflow: hidden;
+}
+.laNephEpicurienne h2 {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+  animation: slide-up 1s ease forwards;
+}
+.laNephEpicurienne h2:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.laNephEpicurienne h2:nth-child(2) {
+  animation-delay: 1s;
+}
+.laNephEpicurienne h2:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.laNephEpicurienne h2:nth-child(4) {
+  animation-delay: 2s;
+}
+.laNephEpicurienne h2:nth-child(5) {
+  animation-delay: 2.5s;
+}
+.laNephEpicurienne h2:nth-child(6) {
+  animation-delay: 3s;
+}
+.laNephEpicurienne h2:nth-child(7) {
+  animation-delay: 3.5s;
+}
+.laNephEpicurienne h2:nth-child(8) {
+  animation-delay: 4s;
+}
+.laNephEpicurienne h2:nth-child(9) {
+  animation-delay: 4.5s;
+}
+.laNephEpicurienne h2:nth-child(10) {
+  animation-delay: 5s;
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 * {
   /* Rules */
   box-sizing: border-box;
