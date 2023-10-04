@@ -1,0 +1,35 @@
+.listItemWrapper {
+    display: flex;
+    align-items: center;
+  
+    .listItem {
+      flex: 1;
+      // Ajoutez d'autres styles ici
+    }
+  
+    .checkMark {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      opacity: 0;
+  
+      svg {
+        // Ajoutez des styles pour votre icône svg ici
+      }
+    }
+  
+    &:hover {
+      .checkMark {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+  
+  // Pour gérer les intitulés longs, vous pouvez utiliser text-overflow.
+  .listDishes span[itemprop="name"] {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; // ou toute autre valeur qui vous convient
+  }
+  

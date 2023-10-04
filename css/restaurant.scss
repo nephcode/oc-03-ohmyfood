@@ -2,10 +2,6 @@
 // RESTAURANT =========== NEPHA CODE =================================//
 //==============================================================2023==//
 
-// MAIN ------------------------------------------------------------- //
-@use 'pages/restaurant';
-
-
 // BASE ------------------------------------------------------------- //
 @use 'base/colors';
 @use 'base/typo';
@@ -14,14 +10,15 @@
 @use 'components/button';
 @use 'components/card';
 @use 'components/heart';
-@use 'components/check';
 @use 'components/animenu';
+@use 'components/animdishes';
 
 // GLOBAL & HEADER -------------------------------------------------- //
 @use 'layouts/global';
 @use 'layouts/header';
 
-
+// MAIN ------------------------------------------------------------- //
+@use 'pages/restaurant';
 
 // FOOTER ----------------------------------------------------------- //
 @use 'layouts/footer';

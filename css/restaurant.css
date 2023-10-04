@@ -10,138 +10,6 @@ p {
   font-family: 1rem;
 }
 
-/* === SUR-CHARGE HEADER =========================================== */
-header {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 20px;
-  place-items: center;
-  background-color: white;
-  min-height: 60px;
-}
-header .logo {
-  place-items: center;
-  padding: 20px;
-}
-header nav {
-  justify-self: start;
-}
-
-/* === BANNER ============================================= */
-#banner {
-  width: 100%;
-  position: sticky;
-}
-#banner img {
-  aspect-ratio: 2.618;
-  object-fit: cover;
-  width: 100%;
-}
-@media screen and (min-width: 767px) {
-  #banner {
-    height: 200px;
-  }
-}
-
-/* === MAIN ============================================= */
-main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  background-color: #f6f6f6;
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
-  position: relative;
-  top: -50px;
-  z-index: 20;
-}
-main h1 {
-  font-family: "Shrikhand";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-align: center;
-}
-main p {
-  text-align: center;
-}
-@media screen and (min-width: 767px) {
-  main {
-    max-width: 1024px;
-    top: 0;
-    margin: 0 auto;
-  }
-}
-
-/* === SECTION MENU ========================================= */
-#menu {
-  display: flex;
-  justify-items: center;
-  flex-direction: column;
-}
-#menu .titreEpicurienne {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 10px;
-  justify-items: start;
-}
-#menu h2 {
-  margin: 0.7vh;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  position: relative;
-}
-#menu h2::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -5;
-  left: 0;
-  width: 25px;
-  height: 2px;
-  background-color: #99e2d0;
-}
-#menu h2 .laNephEpicurienne {
-  display: flex;
-  width: 95%;
-  justify-content: center;
-  margin: 0 auto;
-}
-#menu p {
-  text-align: center;
-}
-@media screen and (min-width: 767px) {
-  #menu {
-    justify-content: center;
-  }
-  #menu .laNephEpicurienne {
-    justify-content: center;
-    padding: 0 auto;
-    width: 50%;
-    margin: 0 auto;
-  }
-  #menu .titreEpicurienne {
-    width: 35%;
-    justify-items: center;
-    margin: 0 auto;
-  }
-}
-
-/* === SECTION COMMANDE ========================================= */
-#commande {
-  display: grid;
-  place-items: center;
-  background-color: #f6f6f6;
-}
-#commande p {
-  text-align: center;
-}
-
 .buttonValid {
   color: #ffffff;
   background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
@@ -344,7 +212,10 @@ main p {
   fill: red;
 }
 
-svg {
+i {
+  align-items: center;
+}
+i svg {
   width: 25px;
   height: 25px;
   display: block;
@@ -370,43 +241,14 @@ svg {
 }
 
 .icone-title {
-  display: block;
-  position: relative;
-  right: 20px;
-  bottom: 15px;
+  display: flex;
+  align-items: center;
   opacity: 1;
-  height: 25px;
-  width: 25px;
   fill: none;
   stroke: currentColor;
   z-index: 10;
 }
 .icone-title:hover {
-  opacity: 0.8;
-  transition: opacity 850ms;
-  color: #9747ff;
-  fill: #9747ff;
-}
-
-svg {
-  width: 25px;
-  height: 25px;
-  display: block;
-}
-
-#check {
-  display: block;
-  position: absolute;
-  right: 20px;
-  bottom: 15px;
-  opacity: 1;
-  height: 25px;
-  width: 25px;
-  fill: none;
-  stroke: currentColor;
-  z-index: 10;
-}
-#check:hover {
   opacity: 0.8;
   transition: opacity 850ms;
   color: #9747ff;
@@ -503,6 +345,30 @@ menu_anim {
     transform: translateY(0);
   }
 }
+.listItemWrapper {
+  display: flex;
+  align-items: center;
+}
+.listItemWrapper .listItem {
+  flex: 1;
+}
+.listItemWrapper .checkMark {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+.listItemWrapper:hover .checkMark {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.listDishes span[itemprop=name] {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
 * {
   /* Rules */
   box-sizing: border-box;
@@ -539,6 +405,138 @@ header nav {
   header {
     min-height: 90px;
   }
+}
+
+/* === SUR-CHARGE HEADER =========================================== */
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  place-items: center;
+  background-color: white;
+  min-height: 60px;
+}
+header .logo {
+  place-items: center;
+  padding: 20px;
+}
+header nav {
+  justify-self: start;
+}
+
+/* === BANNER ============================================= */
+#banner {
+  width: 100%;
+  position: sticky;
+}
+#banner img {
+  aspect-ratio: 2.618;
+  object-fit: cover;
+  width: 100%;
+}
+@media screen and (min-width: 767px) {
+  #banner {
+    height: 200px;
+  }
+}
+
+/* === MAIN ============================================= */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  background-color: #f6f6f6;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  position: relative;
+  top: -50px;
+  z-index: 20;
+}
+main h1 {
+  font-family: "Shrikhand";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+main p {
+  text-align: center;
+}
+@media screen and (min-width: 767px) {
+  main {
+    max-width: 1024px;
+    top: 0;
+    margin: 0 auto;
+  }
+}
+
+/* === SECTION MENU ========================================= */
+#menu {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+}
+#menu .titreEpicurienne {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+  justify-items: start;
+}
+#menu h2 {
+  margin: 0.7vh;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  position: relative;
+}
+#menu h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background-color: #99e2d0;
+}
+#menu h2 .laNephEpicurienne {
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  margin: 0 auto;
+}
+#menu p {
+  text-align: center;
+}
+@media screen and (min-width: 767px) {
+  #menu {
+    justify-content: center;
+  }
+  #menu .laNephEpicurienne {
+    justify-content: center;
+    padding: 0 auto;
+    width: 50%;
+    margin: 0 auto;
+  }
+  #menu .titreEpicurienne {
+    width: 35%;
+    justify-items: center;
+    margin: 0 auto;
+  }
+}
+
+/* === SECTION COMMANDE ========================================= */
+#commande {
+  display: grid;
+  place-items: center;
+  background-color: #f6f6f6;
+}
+#commande p {
+  text-align: center;
 }
 
 footer {

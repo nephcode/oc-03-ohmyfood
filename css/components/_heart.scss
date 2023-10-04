@@ -5,11 +5,16 @@
 @use "sass:math";
 
 
+i {
+
+  align-items: center;
+
 svg {
     width: 25px;
     height: 25px;
     display: block;
   }
+}
   .icone {
     display: block;
     position: absolute;
@@ -31,13 +36,9 @@ svg {
   }
 
   .icone-title {
-    display: block;
-    position: relative;
-    right: 20px;
-    bottom: 15px;
+    display: flex;
+    align-items: center;
     opacity: 1;
-    height: 25px;
-    width: 25px;
     fill: none;
     stroke: currentColor;
     z-index: 10;
