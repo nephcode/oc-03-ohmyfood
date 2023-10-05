@@ -4,28 +4,41 @@
 @use "../base/colors";
 @use "sass:math";
 
-
 svg {
-    width: 25px;
-    height: 25px;
-    display: block;
-  }
-  #check {
-    display: block;
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
-    opacity: 1;
-    height: 25px;
-    width: 25px;
-    fill: none;
-    stroke: currentColor;
-    z-index: 10;
+  width: 25px;
+  height: 25px;
+  display: block;
+}
 
-    &:hover {
-      opacity: 0.8;
-      transition: opacity 850ms;
-      color: colors.$heart-primary;
-      fill: colors.$heart-primary;
-    }
+.icone-check {
+  height: 100%;
+
+  symbol {
+    fill: white;
   }
+}
+
+#check {
+  display: block;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  opacity: 1;
+  height: 25px;
+  width: 25px;
+  fill: white;
+  stroke: white;
+  z-index: 10;
+
+  symbol {
+    fill: white;
+  }
+
+
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 850ms;
+    color: colors.$heart-primary;
+    fill: colors.$heart-primary;
+  }
+}

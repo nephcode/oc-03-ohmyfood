@@ -131,14 +131,15 @@
 
   li {
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    //height: 30px;
-    margin: 0.7vh;
-    padding: 3%;
-    flex-direction: row;
+    min-height: 50px;
+    //margin: 0.7vh;
+    //padding: 3%;
     //max-width: 350px;
     //width: 300px;
+    margin: 0.7vh;
     background-color: colors.$backgroundGlobal;
     border-radius: 20px;
     @include buttonShadow(
@@ -147,16 +148,30 @@
     );
 
     div {
-      display: flex;
-      flex-direction: column;
-      flex-shrink: 1;
+      padding: 15px;
+      height: 100%;
       align-content: space-between;
+    
+      &:nth-child(1) {
+        display: flex;
+flex-direction: column;        ;
+      }
 
       &:nth-child(2) {
         // Cible le deuxième div selon votre structure actuelle
         // order: 3; // Assurez-vous que c'est la valeur la plus élevée parmi les divs pour le pousser vers la fin
         justify-content: flex-end; // aligne horizontalement à la fin (droite)
         align-items: flex-end; // aligne verticalement à la fin (bas)
+      }
+      &:last-child {
+        background-color: colors.$action-secondary;
+        // Cible le deuxième div selon votre structure actuelle
+        // order: 3; // Assurez-vous que c'est la valeur la plus élevée parmi les divs pour le pousser vers la fin
+        justify-content: flex-end; // aligne horizontalement à la fin (droite)
+        align-items: flex-end; // aligne verticalement à la fin (bas)
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        height: 100%;
       }
 
       span {
