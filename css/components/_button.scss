@@ -28,7 +28,8 @@
   text-decoration: none;
 
   //:hover, :active nesting anination
-  &:hover, :active {
+  &:hover,
+  :active {
     opacity: 0.8;
     transition: opacity 250ms;
   }
@@ -97,11 +98,11 @@
     margin: 5px 10px;
     background-color: colors.$background-exploration;
     border-radius: 20px;
-    @include buttonShadow(
-      colors.$buttonShadowColor,
-      colors.$buttonShadowValues
-    );
-
+    
+    &:hover{
+      animation-delay:1.s ;
+    }
+    
     span {
       display: block;
       color: colors.$buttonTextColor;
@@ -132,46 +133,50 @@
   li {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
-    min-height: 50px;
-    //margin: 0.7vh;
-    //padding: 3%;
-    //max-width: 350px;
-    //width: 300px;
+    min-height: 60px;
     margin: 0.7vh;
     background-color: colors.$backgroundGlobal;
     border-radius: 20px;
-    @include buttonShadow(
-      colors.$buttonShadowColor,
-      colors.$buttonShadowValues
-    );
+    overflow:hidden;
 
     div {
-      padding: 15px;
       height: 100%;
       align-content: space-between;
-    
+
       &:nth-child(1) {
         display: flex;
-flex-direction: column;        ;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 10px;
       }
 
       &:nth-child(2) {
-        // Cible le deuxième div selon votre structure actuelle
-        // order: 3; // Assurez-vous que c'est la valeur la plus élevée parmi les divs pour le pousser vers la fin
-        justify-content: flex-end; // aligne horizontalement à la fin (droite)
-        align-items: flex-end; // aligne verticalement à la fin (bas)
+        display: flex;
+        //justify-content: flex-end; 
+        //align-items: flex-end; 
+        //padding-left: -15px;
+        height: 33px;
+        min-width: 60px;
+
       }
       &:last-child {
         background-color: colors.$action-secondary;
-        // Cible le deuxième div selon votre structure actuelle
-        // order: 3; // Assurez-vous que c'est la valeur la plus élevée parmi les divs pour le pousser vers la fin
-        justify-content: flex-end; // aligne horizontalement à la fin (droite)
-        align-items: flex-end; // aligne verticalement à la fin (bas)
         border-bottom-right-radius: 20px;
         border-top-right-radius: 20px;
-        height: 100%;
+        height: 60px;
+        width: 60px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -30px;
+        margin-bottom: -30px;
+        margin-right: -75px;
+        background: colors.$action-primary;
+        transition: margin-right 500ms ease-in-out;
+             
       }
 
       span {
@@ -194,11 +199,7 @@ flex-direction: column;        ;
         }
       }
     }
-    /*
-    img {
-      height: 22px;
-      padding: 0px 15px;
-    }*/
+  
   }
 }
 

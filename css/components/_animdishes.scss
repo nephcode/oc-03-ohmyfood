@@ -21,6 +21,15 @@
       .checkMark {
         transform: translateX(0);
         opacity: 1;
+         
+    
+          i svg{
+            color: white;
+            font-size: 1.35rem;
+            transition: transform 500ms ease-in-out;
+          }
+
+
       }
     }
   }

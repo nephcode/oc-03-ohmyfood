@@ -19,7 +19,8 @@ p {
   border-radius: 50px;
   text-decoration: none;
 }
-.buttonValid:hover, .buttonValid :active {
+.buttonValid:hover,
+.buttonValid :active {
   opacity: 0.8;
   transition: opacity 250ms;
 }
@@ -104,13 +105,12 @@ p {
 .listDishes li {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  min-height: 50px;
+  min-height: 60px;
   margin: 0.7vh;
   background-color: #ffffff;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.2);
   /*
   img {
     height: 22px;
@@ -118,25 +118,35 @@ p {
   }*/
 }
 .listDishes li div {
-  padding: 15px;
   height: 100%;
   align-content: space-between;
 }
 .listDishes li div:nth-child(1) {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding-left: 10px;
 }
 .listDishes li div:nth-child(2) {
-  justify-content: flex-end;
-  align-items: flex-end;
+  display: flex;
+  height: 33px;
+  min-width: 60px;
 }
 .listDishes li div:last-child {
   background-color: #008766;
-  justify-content: flex-end;
-  align-items: flex-end;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
-  height: 100%;
+  height: 60px;
+  width: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -30px;
+  margin-bottom: -30px;
+  margin-right: -75px;
+  background: #99e2d0;
+  transition: margin-right 500ms ease-in-out;
 }
 .listDishes li div span {
   display: flex;
