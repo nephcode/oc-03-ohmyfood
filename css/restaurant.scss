@@ -10,8 +10,9 @@
 @use 'components/button';
 @use 'components/card';
 @use 'components/heart';
+@use 'components/check';
 //@use 'components/animenu';
-//@use 'components/animdishes';
+@use 'components/animdishes';
 
 // GLOBAL & HEADER -------------------------------------------------- //
 @use 'layouts/global';

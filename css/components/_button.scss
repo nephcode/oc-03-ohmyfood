@@ -98,11 +98,7 @@
     margin: 5px 10px;
     background-color: colors.$background-exploration;
     border-radius: 20px;
-    
-    &:hover{
-      animation-delay:1.s ;
-    }
-    
+
     span {
       display: block;
       color: colors.$buttonTextColor;
@@ -126,9 +122,7 @@
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  //max-width: 50%;
   padding: 0px;
-  //margin: 20px;
 
   li {
     display: flex;
@@ -139,7 +133,7 @@
     margin: 0.7vh;
     background-color: colors.$backgroundGlobal;
     border-radius: 20px;
-    overflow:hidden;
+    overflow: hidden;
 
     div {
       height: 100%;
@@ -154,12 +148,11 @@
 
       &:nth-child(2) {
         display: flex;
-        //justify-content: flex-end; 
-        //align-items: flex-end; 
+        //justify-content: flex-end;
+        //align-items: flex-end;
         //padding-left: -15px;
         height: 33px;
         min-width: 60px;
-
       }
       &:last-child {
         background-color: colors.$action-secondary;
@@ -176,7 +169,9 @@
         margin-right: -75px;
         background: colors.$action-primary;
         transition: margin-right 500ms ease-in-out;
-             
+        &:hover {
+          animation-delay: 1s;
+        }
       }
 
       span {
@@ -199,7 +194,6 @@
         }
       }
     }
-  
   }
 }
 

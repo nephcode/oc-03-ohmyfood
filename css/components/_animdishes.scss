@@ -1,44 +1,17 @@
-.listItemWrapper {
-    display: flex;
-    align-items: center;
-  
-    .listItem {
-      flex: 1;
-      // Ajoutez d'autres styles ici
-    }
-  
-    .checkMark {
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-      opacity: 0;
-  
-      svg {
-        // Ajoutez des styles pour votre icône svg ici
-      }
-    }
-  
-    &:hover {
-      .checkMark {
-        transform: translateX(0);
-        opacity: 1;
-         
-    
-          i svg{
-            color: white;
-            font-size: 1.35rem;
-            transition: transform 500ms ease-in-out;
-          }
+.listDishes li {
+  animation-name: animCheck;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 
-
-      }
+  // Définition de l'animation keyframe
+  @keyframes animCheck {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
-  
-  // Pour gérer les intitulés longs, vous pouvez utiliser text-overflow.
-  .listDishes span[itemprop="name"] {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 200px; // ou toute autre valeur qui vous convient
+  &:hover div:last-child {
+    margin-right: -15px;
   }
-  
+}

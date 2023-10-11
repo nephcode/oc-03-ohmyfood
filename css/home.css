@@ -78,7 +78,6 @@ p {
   margin: 5px 10px;
   background-color: #f6f6f6;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.2);
 }
 .listWizard li span {
   display: block;
@@ -111,11 +110,7 @@ p {
   margin: 0.7vh;
   background-color: #ffffff;
   border-radius: 20px;
-  /*
-  img {
-    height: 22px;
-    padding: 0px 15px;
-  }*/
+  overflow: hidden;
 }
 .listDishes li div {
   height: 100%;
@@ -147,6 +142,9 @@ p {
   margin-right: -75px;
   background: #99e2d0;
   transition: margin-right 500ms ease-in-out;
+}
+.listDishes li div:last-child:hover {
+  animation-delay: 1s;
 }
 .listDishes li div span {
   display: flex;
