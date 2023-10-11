@@ -324,6 +324,156 @@ header nav {
   }
 }
 
+.opening {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #353535;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  animation: PageTransition 1s forwards;
+  animation-delay: 5s;
+}
+.opening--fast {
+  animation-delay: 1s;
+}
+.opening svg {
+  display: unset;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+.o, .h, .m, .y, .f, .o2, .o3, .d {
+  fill: transparent;
+  stroke: #ff79da;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: Dash 3s forwards, FadeOut 600ms forwards;
+}
+
+.o {
+  animation-delay: 1s, 2.2s;
+}
+
+.h {
+  animation-delay: 1.2s, 2.3s;
+}
+
+.m {
+  animation-delay: 1.3s, 2.4s;
+}
+
+.y {
+  animation-delay: 1.4s, 2.5s;
+}
+
+.f {
+  animation-delay: 1.5s, 2.6s;
+}
+
+.o2 {
+  animation-delay: 1.6s, 2.7s;
+}
+
+.o3 {
+  animation-delay: 1.7s, 2.8s;
+}
+
+.d {
+  animation-delay: 1.8s, 2.9s;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.loader__bar {
+  width: 10px;
+  height: 0;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  margin: 0 0.2rem;
+  animation: StartBars 1000ms forwards ease-in-out, Bars 800ms backwards infinite ease-in-out alternate, FadeOut 500ms forwards;
+}
+.loader__bar--1 {
+  animation-delay: 3.5s, 200ms, 5.3s;
+}
+.loader__bar--1.fast {
+  animation-delay: 500ms, 200ms, 2.7s;
+}
+.loader__bar--2 {
+  animation-delay: 3.5s, 400ms, 5.3s;
+}
+.loader__bar--2.fast {
+  animation-delay: 500ms, 400ms, 2.7s;
+}
+.loader__bar--3 {
+  animation-delay: 3.5s, 600ms, 5.3s;
+}
+.loader__bar--3.fast {
+  animation-delay: 500ms, 600ms, 2.7s;
+}
+.loader__bar--4 {
+  animation-delay: 3.5s, 800ms, 5.3s;
+}
+.loader__bar--4.fast {
+  animation-delay: 500ms, 800ms, 2.7s;
+}
+.loader__bar--5 {
+  animation-delay: 3.5s, 1000ms, 5.3s;
+}
+.loader__bar--5.fast {
+  animation-delay: 500ms, 1000ms, 2.7s;
+}
+
+@keyframes PageTransition {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+    position: fixed;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    position: relative;
+  }
+}
+@keyframes StartBars {
+  to {
+    height: 50px;
+  }
+}
+@keyframes Bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes Dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes FadeOut {
+  to {
+    opacity: 0;
+  }
+}
 :root {
   box-sizing: border-box;
   margin: 0;
