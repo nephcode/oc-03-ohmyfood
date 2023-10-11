@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Ohmyfood - OC-03</title>
+  <link rel="icon" href="/images/common/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/css/restaurant.css">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="coeur" viewBox="0 0 25 25">
+      <g id="Status-Default" serif:id="Status=Default">
+        <path id="Vector"  class="CheminCoeur" d="M12.721,2.406L12.72,2.406L11.874,3.357L11.5,3.777L11.127,3.357L10.28,2.406L10.28,2.405C8.282,0.153 5.097,-0.17 2.976,1.802C0.482,4.125 0.345,8.324 2.585,10.85L10.899,20.215C10.899,20.215 10.899,20.215 10.899,20.215C11.237,20.596 11.759,20.596 12.098,20.215L12.098,20.215L20.412,10.849L20.412,10.849C22.656,8.323 22.518,4.125 20.024,1.802C17.329,-0.337 14.956,0.414 12.721,2.406Z" />
+      </g>
+    </symbol>
+  </svg>
+  <svg>
+    <symbol id="check" viewBox="-1 -1 22 22">
+    <g transform="matrix(1,0,0,0.0185185,0,0)">
+            <g id="Icon-Check" serif:id="Icon/Check" transform="matrix(0.978135,0,0,52.8193,-19.4269,-1306.86)">
+            <path d="M40.085,34.966C40.085,40.488 35.608,44.966 30.085,44.966C24.562,44.966 20.085,40.488 20.085,34.966C20.085,29.443 24.562,24.966 30.085,24.966C35.608,24.966 40.085,29.443 40.085,34.966ZM28.928,40.261L36.347,32.841C36.599,32.589 36.599,32.181 36.347,31.929L35.435,31.016C35.183,30.764 34.775,30.764 34.523,31.016L28.472,37.067L25.647,34.242C25.395,33.99 24.986,33.99 24.734,34.242L23.822,35.155C23.57,35.407 23.57,35.815 23.822,36.067L28.016,40.261C28.268,40.512 28.676,40.512 28.928,40.261Z"/>
+        </g>
+    </g>
+    </symbol>
+</svg>
+</head>
+<body>
+<!-- HEADER IN -->  
+<header>
+    <nav><a href="/"><img src="/images/common/icon-back.svg"></a></nav>
+    <img class="logo" src="/images/common/ohmyfood.svg" alt="logo">
+</header>
+<!-- HEADER OUT -->
+<section id="banner"><img src="/images/restaurants/resto-palette-gout.jpg " alt="La palette du goût"></section>
+<!-- MAIN IN -->
+<main>
+
+<!-- Section du menu "Le délice des sens" -->
+<section id="menu" itemscope itemtype="http://schema.org/Menu">
+    <div class="titreEpicurienne">
+        <h1 itemprop="name">Le délice des sens</h1>
+        <i class="icone-title">
+            <svg>
+              <use href="#coeur"></use>
+            </svg>
+        </i>
+    </div>
+
+    <div class="laNephEpicurienne" itemprop="hasMenuSection">
+        <!-- Section des entrées -->
+        <h2>Entrées</h2>
+        <ul class="listDishes">
+            <!-- Entrée 1 -->
+            <li itemscope itemtype="http://schema.org/MenuItem">
+                <div>
+                    <span itemprop="name">Tartare de thon</span>
+                    <span itemprop="description">Assaisonné au yuzu</span>
+                </div>
+                <div>
+                    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span itemprop="price">25</span>€
+                    </span>
+                </div>
+                <div>    
+                    <i class="iconeCheck">
+                        <svg>
+                          <use href="#check"></use>
+                        </svg>
+                      </i>
+             </div>
+            </li>
+            <!-- Entrée 2 -->
+            <li itemscope itemtype="http://schema.org/MenuItem">
+                <div>
+                    <span itemprop="name">Bouchée de homard croustillant</span>
+                    <span itemprop="description">Et sa farandole de petits légumes</span>
+                </div>
+                <div>
+                    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span itemprop="price">35</span>€
+                    </span>
+                </div>
+                <div>    
+                    <i class="iconeCheck">
+                        <svg>
+                          <use href="#check"></use>
+                        </svg>
+                      </i>
+             </div>
+            </li>
+            <!-- Entrée 3 -->
+            <li itemscope itemtype="http://schema.org/MenuItem">
+                <div>
+                    <span itemprop="name">Velouté de cèpes</span>
+                    <span itemprop="description">Aux truffes</span>
+                </div>
+                <div>
+                    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span itemprop="price">20</span>€
+                    </span>
+                </div>
+                <div>    
+                    <i class="iconeCheck">
+                        <svg>
+                          <use href="#check"></use>
+                        </svg>
+                      </i>
+             </div>
+            </li>
+        </ul>
+
+        <!-- Section des plats -->
+        <h2>Plats</h2>
+        <ul class="listDishes">
+            <!-- Plat 1 -->
+            <li itemscope itemtype="http://schema.org/MenuItem">
+                <div>
+                    <span itemprop="name">Poulet rôti aux herbes de Provence</span>
+                    <span itemprop="description">Et sa crème de truffe</span>
+                </div>
+                <div>
+                    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span itemprop="price">40</span>€
+                    </span>
+                </div>
+                <div>    
+                    <i class="iconeCheck">
+                        <svg>
+                          <use href="#check"></use>
+                        </svg>
+                      </i>
+                 </div>
+            </li>
+            <!-- Plat 2 -->
+            <li itemscope itemtype="http://schema.org/MenuItem">
+                <div>
+                    <span itemprop="name">Langouste rôtie</span>
+                    <span itemprop="description">Et ses légumes de saison</span>
+                </div>
+                <div>
+                    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span itemprop="price">35</span>€
+                    </span>
+                </div>
+                <div>    
+                    <i class="iconeCheck">
+                        <svg>
+                          <use href="#check"></use>
+                        </svg>
+                      </i>
+             </div>
+            </li>
+            <!-- Plat 3 -->
+            <li itemscope itemtype="http://schema.org/MenuItem">
+                <div>
+                    <span itemprop="name">Côte de bœuf Angus</span>
+                    <span itemprop="description">Et sa purée de panais</span>
+                </div>
+                <div>
+                    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span itemprop="price">44</span>€
+                    </span>
+                </div>
+                <div>    
+                    <i class="iconeCheck">
+                        <svg>
+                          <use href="#check"></use>
+                        </svg>
+                      </i>
+             </div>
+            </li>
+              </ul>
+
+        <!-- Section des desserts -->
+        <h2>Desserts</h2>
+        <ul class="listDishes">
+            <!-- Dessert 1 -->
+            <li itemscope itemtype="http://schema.org/MenuItem">
+                <div>
+                    <span itemprop="name">Farandole de desserts</span>
+                    <span itemprop="description">Du chef</span>
+                </div>
+                <div>
+                    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span itemprop="price">18</span>€
+                    </span>
+                </div>
+                <div>    
+                    <i class="iconeCheck">
+                        <svg>
+                          <use href="#check"></use>
+                        </svg>
+                      </i>
+             </div>
+            </li>
+            <!-- Dessert 2 -->
+            <li itemscope itemtype="http://schema.org/MenuItem">
+                <div>
+                    <span itemprop="name">Crème brulée</span>
+                    <span itemprop="description">Revisitée</span>
+                </div>
+                <div>
+                    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span itemprop="price">22</span>€
+                    </span>
+                </div>
+                <div>    
+                    <i class="iconeCheck">
+                        <svg>
+                          <use href="#check"></use>
+                        </svg>
+                      </i>
+             </div>
+            </li>
+            <!-- Dessert 3 -->
+            <li itemscope itemtype="http://schema.org/MenuItem">
+                <div>
+                    <span itemprop="name">Tiramisu</span>
+                    <span itemprop="description">À la noisette</span>
+                </div>
+                <div>
+                    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span itemprop="price">23</span>€
+                    </span>
+                </div>
+                <div>    
+                    <i class="iconeCheck">
+                        <svg>
+                          <use href="#check"></use>
+                        </svg>
+                      </i>
+             </div>
+            </li>
+          
+        </ul>
+    </div>
+</section>
+
+
+
+<section id="commande"><a href="#" class="buttonValid">Commander</a></section>
+    
+</main>
+<!-- MAIN OUT -->
+
+<!-- FOOTER IN -->
+<footer>
+    <img id="logo-footer" class="logo" src="/images/common/ohmyfood-footer.svg" alt="logo">
+    <nav>
+      <ul>
+        <li><img src="/images/common/icon-fork.svg"><a href="#">Proposer un restaurant</a></li>
+        <li><img src="/images/common/icon-hand.svg"><a href="#">Devenir partenaire</a></li>
+        <li><a href="#">Mentions Legales</a></li>
+        <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+  
+  <!-- FOOTER OUT -->
+  </body>
+  </html>

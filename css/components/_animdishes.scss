@@ -1,0 +1,17 @@
+.listDishes li {
+  animation-name: animCheck;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+  // Définition de l'animation keyframe
+  @keyframes animCheck {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &:hover div:last-child {
+    margin-right: -1px;
+  }
+}

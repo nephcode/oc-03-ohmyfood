@@ -19,7 +19,8 @@ p {
   border-radius: 50px;
   text-decoration: none;
 }
-.buttonValid:hover, .buttonValid :active {
+.buttonValid:hover,
+.buttonValid :active {
   opacity: 0.8;
   transition: opacity 250ms;
 }
@@ -77,7 +78,6 @@ p {
   margin: 5px 10px;
   background-color: #f6f6f6;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.2);
 }
 .listWizard li span {
   display: block;
@@ -103,41 +103,72 @@ p {
 }
 .listDishes li {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin: 0.7vh;
-  padding: 3%;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  margin: 0.7vh;
   background-color: #ffffff;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.2);
-  /*
-  img {
-    height: 22px;
-    padding: 0px 15px;
-  }*/
+  overflow: hidden;
 }
 .listDishes li div {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 1;
+  height: 100%;
   align-content: space-between;
 }
-.listDishes li div:nth-child(2) {
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-.listDishes li div span {
+.listDishes li div:nth-child(1) {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.listDishes li div:nth-child(1) span {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.listDishes li div:nth-child(2) {
+  display: flex;
+  height: 33px;
+  min-width: 60px;
+}
+.listDishes li div:last-child {
+  background-color: #008766;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 60px;
+  width: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -30px;
+  margin-bottom: -30px;
+  margin-right: -75px;
+  background: #99e2d0;
+  transition: margin-right 500ms ease-in-out;
+}
+.listDishes li div:last-child:hover {
+  animation-delay: 1s;
 }
 .listDishes li div span[itemprop=name] {
   font-weight: bold;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .listDishes li div span[itemprop=description] {
+  font-size: 0.8rem;
   font-weight: lighter;
   white-space: nowrap;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .listDishes li div span[itemprop=offers] {
   display: flex;
@@ -208,11 +239,14 @@ p {
 .card .icone:hover {
   opacity: 0.8;
   transition: opacity 850ms;
-  color: red;
-  fill: red;
+  color: color-mix(in srgb, color percentage, color percentage);
+  fill: #9747ff;
 }
 
-svg {
+i {
+  align-items: center;
+}
+i svg {
   width: 25px;
   height: 25px;
   display: block;
@@ -231,6 +265,21 @@ svg {
   z-index: 10;
 }
 .icone:hover {
+  opacity: 0.8;
+  transition: opacity 850ms;
+  color: #9747ff;
+  fill: #9747ff;
+}
+
+.icone-title {
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  fill: none;
+  stroke: currentColor;
+  z-index: 10;
+}
+.icone-title:hover {
   opacity: 0.8;
   transition: opacity 850ms;
   color: #9747ff;
@@ -275,6 +324,156 @@ header nav {
   }
 }
 
+.opening {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #353535;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  animation: PageTransition 1s forwards;
+  animation-delay: 5s;
+}
+.opening--fast {
+  animation-delay: 1s;
+}
+.opening svg {
+  display: unset;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+.o, .h, .m, .y, .f, .o2, .o3, .d {
+  fill: transparent;
+  stroke: #ff79da;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: Dash 3s forwards, FadeOut 600ms forwards;
+}
+
+.o {
+  animation-delay: 1s, 2.2s;
+}
+
+.h {
+  animation-delay: 1.2s, 2.3s;
+}
+
+.m {
+  animation-delay: 1.3s, 2.4s;
+}
+
+.y {
+  animation-delay: 1.4s, 2.5s;
+}
+
+.f {
+  animation-delay: 1.5s, 2.6s;
+}
+
+.o2 {
+  animation-delay: 1.6s, 2.7s;
+}
+
+.o3 {
+  animation-delay: 1.7s, 2.8s;
+}
+
+.d {
+  animation-delay: 1.8s, 2.9s;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.loader__bar {
+  width: 10px;
+  height: 0;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  margin: 0 0.2rem;
+  animation: StartBars 1000ms forwards ease-in-out, Bars 800ms backwards infinite ease-in-out alternate, FadeOut 500ms forwards;
+}
+.loader__bar--1 {
+  animation-delay: 3.5s, 200ms, 5.3s;
+}
+.loader__bar--1.fast {
+  animation-delay: 500ms, 200ms, 2.7s;
+}
+.loader__bar--2 {
+  animation-delay: 3.5s, 400ms, 5.3s;
+}
+.loader__bar--2.fast {
+  animation-delay: 500ms, 400ms, 2.7s;
+}
+.loader__bar--3 {
+  animation-delay: 3.5s, 600ms, 5.3s;
+}
+.loader__bar--3.fast {
+  animation-delay: 500ms, 600ms, 2.7s;
+}
+.loader__bar--4 {
+  animation-delay: 3.5s, 800ms, 5.3s;
+}
+.loader__bar--4.fast {
+  animation-delay: 500ms, 800ms, 2.7s;
+}
+.loader__bar--5 {
+  animation-delay: 3.5s, 1000ms, 5.3s;
+}
+.loader__bar--5.fast {
+  animation-delay: 500ms, 1000ms, 2.7s;
+}
+
+@keyframes PageTransition {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+    position: fixed;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    position: relative;
+  }
+}
+@keyframes StartBars {
+  to {
+    height: 50px;
+  }
+}
+@keyframes Bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes Dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes FadeOut {
+  to {
+    opacity: 0;
+  }
+}
 :root {
   box-sizing: border-box;
   margin: 0;
@@ -410,24 +609,24 @@ footer {
   font-size: 1rem;
   padding: 25px;
 }
-footer nav li {
+footer nav ul li {
   list-style-type: none;
   padding-top: 10px;
 }
-footer nav li img {
+footer nav ul li img {
   padding-right: 10px;
 }
-footer nav li img + a {
+footer nav ul li img + a {
   font-weight: 500;
 }
-footer nav a {
+footer nav ul a {
   color: white;
   text-decoration: none;
 }
-footer nav a:link {
+footer nav ul a:link {
   color: white;
 }
-footer nav a:visited {
+footer nav ul a:visited {
   color: white;
 }
 footer #logo-footer {
@@ -437,7 +636,7 @@ footer #logo-footer {
   footer {
     display: flex;
     flex-direction: row-reverse;
-    align-items: end;
+    align-items: baseline;
   }
   footer nav,
   footer ul, footer li {

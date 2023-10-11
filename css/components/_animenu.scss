@@ -1,0 +1,52 @@
+//===============================OhMyF°>°D= ======================//
+// ANIM MENU ===================================== 🌀 ============//
+//================================================================//
+@use "../base/colors";
+@use "sass:math";
+
+menu_anim {
+  color: colors.$action-primary;
+}
+
+// Variables SASS pour le timing et la durée
+$animation-duration: 1s;
+$animation-delay: 0.5s;
+
+.listDishes {
+  overflow: hidden;
+
+  li {
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: opacity, transform;
+    animation: slide-up $animation-duration ease forwards;
+
+    // LI en boucle sur un filet de sauce soja
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation-delay: $animation-delay * $i;
+      }
+    }
+  }
+}
+
+.laNephEpicurienne{
+    overflow: hidden;
+  
+    h2 {
+      //opacity: 0;
+      transform: translateY(20px);
+      will-change: opacity, transform;
+      animation: slide-up $animation-duration ease forwards;
+  
+      // LI en boucle sur un filet de sauce soja
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          animation-delay: $animation-delay * $i;
+        }
+      }
+    }
+  }
+
+
+

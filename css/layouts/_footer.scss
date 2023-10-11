@@ -12,8 +12,8 @@ footer {
   line-height: normal;
   font-size: 1rem;
   padding: 25px;
-  nav {
-     li {
+  nav ul{
+    li {
       list-style-type: none;
       padding-top: 10px;
       img {
@@ -41,7 +41,7 @@ footer {
   @media screen and (min-width: 767px) {
     display: flex;
     flex-direction: row-reverse;
-    align-items: end;
+    align-items: baseline;
     nav,
     ul, li  {
       display: inline-flex;

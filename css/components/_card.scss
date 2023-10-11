@@ -76,8 +76,8 @@ $radiusCard: 20px;
     &:hover {
       opacity: 0.8;
       transition: opacity 850ms;
-      color: red;
-      fill: red;
+      color: color-mix(in srgb, color percentage, color percentage);
+      fill: colors.$heart-primary;
     }
   }
 }
