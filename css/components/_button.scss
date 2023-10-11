@@ -143,7 +143,19 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        max-width: 100%;
         padding-left: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        span{
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
       }
 
       &:nth-child(2) {
@@ -175,16 +187,24 @@
       }
 
       span {
-        display: flex;
+       // display: flex;
 
         &[itemprop="name"] {
           font-weight: bold;
+          width: 100%;
+          overflow: hidden; 
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      
         }
         &[itemprop="description"] {
-          font-weight: lighter;
-          white-space: nowrap;
-          overflow-wrap: break-word;
           font-size: 0.8rem;
+          font-weight: lighter;
+          //overflow-wrap: break-word;
+          white-space: nowrap;
+          overflow: hidden; 
+          text-overflow: ellipsis;
+      
         }
 
         &[itemprop="offers"] {

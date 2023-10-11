@@ -120,7 +120,17 @@ p {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 100%;
   padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.listDishes li div:nth-child(1) span {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .listDishes li div:nth-child(2) {
   display: flex;
@@ -146,17 +156,19 @@ p {
 .listDishes li div:last-child:hover {
   animation-delay: 1s;
 }
-.listDishes li div span {
-  display: flex;
-}
 .listDishes li div span[itemprop=name] {
   font-weight: bold;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .listDishes li div span[itemprop=description] {
+  font-size: 0.8rem;
   font-weight: lighter;
   white-space: nowrap;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .listDishes li div span[itemprop=offers] {
   display: flex;
