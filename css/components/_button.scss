@@ -28,7 +28,8 @@
   text-decoration: none;
 
   //:hover, :active nesting anination
-  &:hover, :active {
+  &:hover,
+  :active {
     opacity: 0.8;
     transition: opacity 250ms;
   }
@@ -97,10 +98,6 @@
     margin: 5px 10px;
     background-color: colors.$background-exploration;
     border-radius: 20px;
-    @include buttonShadow(
-      colors.$buttonShadowColor,
-      colors.$buttonShadowValues
-    );
 
     span {
       display: block;
@@ -125,51 +122,89 @@
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  //max-width: 50%;
   padding: 0px;
-  //margin: 20px;
 
   li {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    //height: 30px;
-    margin: 0.7vh;
-    padding: 3%;
     flex-direction: row;
-    //max-width: 350px;
-    //width: 300px;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    margin: 0.7vh;
     background-color: colors.$backgroundGlobal;
     border-radius: 20px;
-    @include buttonShadow(
-      colors.$buttonShadowColor,
-      colors.$buttonShadowValues
-    );
+    overflow: hidden;
 
     div {
-      display: flex;
-      flex-direction: column;
-      flex-shrink: 1;
+      height: 100%;
       align-content: space-between;
 
+      &:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        padding-left: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        span{
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+      }
+
       &:nth-child(2) {
-        // Cible le deuxième div selon votre structure actuelle
-        // order: 3; // Assurez-vous que c'est la valeur la plus élevée parmi les divs pour le pousser vers la fin
-        justify-content: flex-end; // aligne horizontalement à la fin (droite)
-        align-items: flex-end; // aligne verticalement à la fin (bas)
+        display: flex;
+        //justify-content: flex-end;
+        //align-items: flex-end;
+        //padding-left: -15px;
+        height: 33px;
+        min-width: 60px;
+      }
+      &:last-child {
+        background-color: colors.$action-secondary;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        height: 60px;
+        width: 60px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -30px;
+        margin-bottom: -30px;
+        margin-right: -75px;
+        background: colors.$action-primary;
+        transition: margin-right 500ms ease-in-out;
+        &:hover {
+          animation-delay: 1s;
+        }
       }
 
       span {
-        display: flex;
+       // display: flex;
 
         &[itemprop="name"] {
           font-weight: bold;
+          width: 100%;
+          overflow: hidden; 
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      
         }
         &[itemprop="description"] {
-          font-weight: lighter;
-          white-space: nowrap;
-          overflow-wrap: break-word;
           font-size: 0.8rem;
+          font-weight: lighter;
+          //overflow-wrap: break-word;
+          white-space: nowrap;
+          overflow: hidden; 
+          text-overflow: ellipsis;
+      
         }
 
         &[itemprop="offers"] {
@@ -179,11 +214,6 @@
         }
       }
     }
-    /*
-    img {
-      height: 22px;
-      padding: 0px 15px;
-    }*/
   }
 }
 
