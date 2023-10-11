@@ -11,8 +11,7 @@
 @use 'components/card';
 @use 'components/heart';
 @use 'components/check';
-//@use 'components/animenu';
-@use 'components/animdishes';
+
 
 // GLOBAL & HEADER -------------------------------------------------- //
 @use 'layouts/global';
@@ -20,6 +19,8 @@
 
 // MAIN ------------------------------------------------------------- //
 @use 'pages/restaurant';
+@use 'components/animenu';
+@use 'components/animdishes';
 
 // FOOTER ----------------------------------------------------------- //
 @use 'layouts/footer';

@@ -25,7 +25,7 @@ header {
 #banner {
   width: 100%;
   //max-height: 260px;
- $bannerRatio: math.div(2.618, 1);
+  $bannerRatio: math.div(2.618, 1);
   // z-index: -1;
   position: sticky;
   img {
@@ -68,7 +68,7 @@ main {
     max-width: 1024px;
     top: 0;
     margin: 0 auto;
-   // place-items: stretch;
+    // place-items: stretch;
   }
 }
 
@@ -78,7 +78,7 @@ main {
   justify-items: center;
   flex-direction: column;
 
-  .titreEpicurienne{
+  .titreEpicurienne {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -87,7 +87,9 @@ main {
     justify-items: start;
   }
   h2 {
+    //opacity: 0;
     margin: 0.7vh;
+    margin-bottom: 25px;
     font-weight: 300;
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -96,8 +98,8 @@ main {
       content: "";
       display: block;
       position: absolute;
-      bottom: -5;
-      left: 0; // Ajustez si nécessaire
+      bottom: -5px;
+      left: 0px; // Ajustez si nécessaire
       width: 25px;
       height: 2px;
       background-color: colors.$action-primary;
@@ -108,8 +110,6 @@ main {
       justify-content: center;
       margin: 0 auto;
     }
-
-   
   }
 
   p {
@@ -123,9 +123,8 @@ main {
       padding: 0 auto;
       width: 50%;
       margin: 0 auto;
-    
     }
-    .titreEpicurienne{
+    .titreEpicurienne {
       width: 35%;
       justify-items: center;
       margin: 0 auto;

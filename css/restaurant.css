@@ -321,22 +321,6 @@ svg {
   fill: #9747ff;
 }
 
-.listDishes li {
-  animation-name: animCheck;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-@keyframes animCheck {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.listDishes li:hover div:last-child {
-  margin-right: -1px;
-}
-
 * {
   /* Rules */
   box-sizing: border-box;
@@ -457,6 +441,7 @@ main p {
 }
 #menu h2 {
   margin: 0.7vh;
+  margin-bottom: 25px;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -466,8 +451,8 @@ main p {
   content: "";
   display: block;
   position: absolute;
-  bottom: -5;
-  left: 0;
+  bottom: -5px;
+  left: 0px;
   width: 25px;
   height: 2px;
   background-color: #99e2d0;
@@ -508,6 +493,105 @@ main p {
   text-align: center;
 }
 
+menu_anim {
+  color: #99e2d0;
+}
+
+.listDishes {
+  overflow: hidden;
+}
+.listDishes li {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+  animation: slide-up 1s ease forwards;
+}
+.listDishes li:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.listDishes li:nth-child(2) {
+  animation-delay: 1s;
+}
+.listDishes li:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.listDishes li:nth-child(4) {
+  animation-delay: 2s;
+}
+.listDishes li:nth-child(5) {
+  animation-delay: 2.5s;
+}
+.listDishes li:nth-child(6) {
+  animation-delay: 3s;
+}
+.listDishes li:nth-child(7) {
+  animation-delay: 3.5s;
+}
+.listDishes li:nth-child(8) {
+  animation-delay: 4s;
+}
+.listDishes li:nth-child(9) {
+  animation-delay: 4.5s;
+}
+.listDishes li:nth-child(10) {
+  animation-delay: 5s;
+}
+
+.laNephEpicurienne {
+  overflow: hidden;
+}
+.laNephEpicurienne h2 {
+  transform: translateY(20px);
+  will-change: opacity, transform;
+  animation: slide-up 1s ease forwards;
+}
+.laNephEpicurienne h2:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.laNephEpicurienne h2:nth-child(2) {
+  animation-delay: 1s;
+}
+.laNephEpicurienne h2:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.laNephEpicurienne h2:nth-child(4) {
+  animation-delay: 2s;
+}
+.laNephEpicurienne h2:nth-child(5) {
+  animation-delay: 2.5s;
+}
+.laNephEpicurienne h2:nth-child(6) {
+  animation-delay: 3s;
+}
+.laNephEpicurienne h2:nth-child(7) {
+  animation-delay: 3.5s;
+}
+.laNephEpicurienne h2:nth-child(8) {
+  animation-delay: 4s;
+}
+.laNephEpicurienne h2:nth-child(9) {
+  animation-delay: 4.5s;
+}
+.laNephEpicurienne h2:nth-child(10) {
+  animation-delay: 5s;
+}
+
+.listDishes li {
+  animation-name: animCheck;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes animCheck {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.listDishes li:hover div:last-child {
+  margin-right: -1px;
+}
+
 footer {
   background-color: #353535;
   font-family: "roboto";
@@ -517,24 +601,24 @@ footer {
   font-size: 1rem;
   padding: 25px;
 }
-footer nav li {
+footer nav ul li {
   list-style-type: none;
   padding-top: 10px;
 }
-footer nav li img {
+footer nav ul li img {
   padding-right: 10px;
 }
-footer nav li img + a {
+footer nav ul li img + a {
   font-weight: 500;
 }
-footer nav a {
+footer nav ul a {
   color: white;
   text-decoration: none;
 }
-footer nav a:link {
+footer nav ul a:link {
   color: white;
 }
-footer nav a:visited {
+footer nav ul a:visited {
   color: white;
 }
 footer #logo-footer {
@@ -544,7 +628,7 @@ footer #logo-footer {
   footer {
     display: flex;
     flex-direction: row-reverse;
-    align-items: end;
+    align-items: baseline;
   }
   footer nav,
   footer ul, footer li {

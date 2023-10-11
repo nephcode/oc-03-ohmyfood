@@ -609,24 +609,24 @@ footer {
   font-size: 1rem;
   padding: 25px;
 }
-footer nav li {
+footer nav ul li {
   list-style-type: none;
   padding-top: 10px;
 }
-footer nav li img {
+footer nav ul li img {
   padding-right: 10px;
 }
-footer nav li img + a {
+footer nav ul li img + a {
   font-weight: 500;
 }
-footer nav a {
+footer nav ul a {
   color: white;
   text-decoration: none;
 }
-footer nav a:link {
+footer nav ul a:link {
   color: white;
 }
-footer nav a:visited {
+footer nav ul a:visited {
   color: white;
 }
 footer #logo-footer {
@@ -636,7 +636,7 @@ footer #logo-footer {
   footer {
     display: flex;
     flex-direction: row-reverse;
-    align-items: end;
+    align-items: baseline;
   }
   footer nav,
   footer ul, footer li {

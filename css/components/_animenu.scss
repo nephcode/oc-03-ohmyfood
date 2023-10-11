@@ -15,7 +15,7 @@ $animation-delay: 0.5s;
 .listDishes {
   overflow: hidden;
 
-  li, h2 {
+  li {
     opacity: 0;
     transform: translateY(20px);
     will-change: opacity, transform;
@@ -34,7 +34,7 @@ $animation-delay: 0.5s;
     overflow: hidden;
   
     h2 {
-      opacity: 0;
+      //opacity: 0;
       transform: translateY(20px);
       will-change: opacity, transform;
       animation: slide-up $animation-duration ease forwards;
