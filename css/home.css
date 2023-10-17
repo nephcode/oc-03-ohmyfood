@@ -183,6 +183,27 @@ p {
   flex-basis: 90%;
   margin-bottom: 15px;
   position: relative;
+  /*
+  .icone {
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    //
+    height: 25px;
+    width: 25px;
+    fill: none;
+    stroke: currentColor;
+    z-index: 10;
+
+    &:hover {
+      opacity: 0.8;
+      transition: opacity 850ms;
+      color: color-mix(in srgb, color percentage, color percentage);
+      fill: colors.$heart-primary;
+    }
+  }
+  */
 }
 .card a {
   background-color: #ffffff;
@@ -225,22 +246,13 @@ p {
   height: 25px;
   display: block;
 }
-.card .icone {
-  display: block;
-  position: absolute;
-  right: 20px;
-  bottom: 15px;
-  height: 25px;
-  width: 25px;
-  fill: none;
-  stroke: currentColor;
-  z-index: 10;
+
+#stop-1 {
+  stop-color: #9747ff;
 }
-.card .icone:hover {
-  opacity: 0.8;
-  transition: opacity 850ms;
-  color: color-mix(in srgb, color percentage, color percentage);
-  fill: #9747ff;
+
+#stop-2 {
+  stop-color: #ff79da;
 }
 
 i {
@@ -257,18 +269,37 @@ i svg {
   position: absolute;
   right: 20px;
   bottom: 15px;
-  opacity: 1;
   height: 25px;
   width: 25px;
-  fill: none;
-  stroke: currentColor;
   z-index: 10;
+  /*
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 850ms;
+    color: colors.$heart-primary;
+    fill: colors.$heart-primary;
+  }
+  */
 }
-.icone:hover {
-  opacity: 0.8;
-  transition: opacity 850ms;
-  color: #9747ff;
-  fill: #9747ff;
+.iconePetitCoeur {
+  position: relative;
+  width: 25px;
+}
+.iconePetitCoeur .heart-stroke {
+  stroke: currentColor;
+  stroke-width: 5;
+  fill: currentColor;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+.iconePetitCoeur .heart-stroke:hover {
+  stroke: transparent;
+  opacity: 0;
+}
+.iconePetitCoeur .heart-shape {
+  stroke: url(#heart-gradient) #9747ff;
+  stroke-width: 5;
+  fill: url(#heart-gradient) #9747ff;
 }
 
 .icone-title {
