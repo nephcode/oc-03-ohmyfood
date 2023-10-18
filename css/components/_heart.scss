@@ -46,9 +46,9 @@ i {
     position: relative;
     width: 25px;
     .heart-stroke {
-      stroke: currentColor;
+      stroke: black;
       stroke-width: 5;
-      fill: currentColor;
+      fill: transparent;
       opacity: 1;
       transition: all 0.5s ease-in-out;
 
@@ -60,7 +60,7 @@ i {
     .heart-shape {
       stroke: url(#heart-gradient) colors.$svgPrimary;
       stroke-width: 5;
-      fill: url(#heart-gradient) colors.$svgPrimary;
+      fill: url(#heart-gradient) colors.$svgSecondary;
     }
   }
 }

@@ -248,7 +248,7 @@ p {
 }
 
 #stop-1 {
-  stop-color: #9747ff;
+  stop-color: #9356dc;
 }
 
 #stop-2 {
@@ -286,9 +286,9 @@ i svg {
   width: 25px;
 }
 .iconePetitCoeur .heart-stroke {
-  stroke: currentColor;
+  stroke: black;
   stroke-width: 5;
-  fill: currentColor;
+  fill: transparent;
   opacity: 1;
   transition: all 0.5s ease-in-out;
 }
@@ -297,9 +297,9 @@ i svg {
   opacity: 0;
 }
 .iconePetitCoeur .heart-shape {
-  stroke: url(#heart-gradient) #9747ff;
+  stroke: url(#heart-gradient) #9356dc;
   stroke-width: 5;
-  fill: url(#heart-gradient) #9747ff;
+  fill: url(#heart-gradient) #ff79da;
 }
 
 .icone-title {
@@ -313,8 +313,8 @@ i svg {
 .icone-title:hover {
   opacity: 0.8;
   transition: opacity 850ms;
-  color: #9747ff;
-  fill: #9747ff;
+  color: #9356dc;
+  fill: #9356dc;
 }
 
 * {
