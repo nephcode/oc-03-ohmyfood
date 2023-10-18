@@ -1,0 +1,27 @@
+// Définition des couleurs dans un map SASS
+
+.heart-container {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .heart {
+    width: 70%;
+    height: 70%;
+
+  }
+  
+  .heart-shape {
+    fill: none;
+    stroke: black;
+    stroke-width: 2;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    
+    &:hover {
+      stroke-opacity: 0;
+      fill-opacity: 1;
+      fill: url(#heart-gradient);
+    }
+  }
+  
