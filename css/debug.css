@@ -24,4 +24,18 @@
 }
 .heart-shape:hover {
   fill: url(#heart-gradient);
+}
+
+.coeurKhaos {
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.coeurKhaos:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: white;
+  font-weight: 600;
+  transform: scale(1.2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }/*# sourceMappingURL=debug.css.map */

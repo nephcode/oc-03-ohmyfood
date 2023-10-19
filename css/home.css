@@ -58,8 +58,17 @@ p {
   padding: 5px 10px; /* Espace intérieur autour du texte */
 }
 
-.JoliCoeur {
-  width: 25px;
+.coeurKhaos {
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.coeurKhaos:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: white;
+  font-weight: 600;
+  transform: scale(1.2);
+  background-clip: text;
 }
 
 .listWizard {
@@ -546,6 +555,11 @@ header nav {
   line-height: normal;
   text-align: center;
 }
+@media screen and (min-width: 767px) {
+  #exploration h1 {
+    font-size: 40px;
+  }
+}
 #exploration p {
   text-align: center;
 }
@@ -646,6 +660,7 @@ footer nav ul {
 footer nav ul li {
   list-style-type: none;
   padding-top: 10px;
+  white-space: nowrap;
 }
 footer nav ul li img {
   padding-right: 10px;
