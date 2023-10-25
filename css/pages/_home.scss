@@ -43,6 +43,9 @@
     font-weight: 700;
     line-height: normal;
     text-align: center;
+    @media screen and (min-width: 767px) {
+      font-size: 40px;
+      }
   }
   p {
     text-align: center;
@@ -67,6 +70,7 @@
     margin: 0 auto;
 
     h2 {
+      font-size: 1.6rem;
       max-width: 1080px;
       margin: 5px auto 10px;
     }
@@ -96,6 +100,7 @@
 
   h2 {
     width: 100%;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;

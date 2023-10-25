@@ -13,9 +13,11 @@ footer {
   font-size: 1rem;
   padding: 25px;
   nav ul{
+    padding-left: 0px;
     li {
       list-style-type: none;
       padding-top: 10px;
+      white-space: nowrap;
       img {
         padding-right: 10px;
         + a {

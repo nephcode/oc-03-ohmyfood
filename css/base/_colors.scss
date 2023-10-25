@@ -16,6 +16,7 @@ $buttonGradientStart: #9356dc !default;
 $buttonGradientEnd: #ff79da !default;
 $buttonTextColor: #ffffff !default;
 $buttonShadowColor: hsla(0, 0%, 0%, 20%) !default;
+$buttonShadowHover: hsla(0, 0%, 0%, 40%) !default;
 $buttonShadowValues: 0px 0px 10px 0px;
 // Variable Buttons --------------------------------------------------//
 $action-primary: #99e2d0 !default;
@@ -24,8 +25,14 @@ $buttonGradientStart: #9356dc !default;
 $fall-primary: #003a68 !default;
 $fall-secondary: #89c8fa !default;
 $heart-primary: #9747ff !default;
+<<<<<<< HEAD
 
 
 
 
+=======
+$svgPrimary: #9356dc !default;
+$svgSecondary: #ff79da !default;
+$svgStroke: #000 !default;
+>>>>>>> dev
 //== please @use <nameSpace> colors ============== DID WE ARE ==2023==//

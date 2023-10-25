@@ -1,0 +1,74 @@
+// Définition des couleurs dans un map SASS
+@use "../css/base/colors";
+@use "sass:math";
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+
+
+$gradient-btn: linear-gradient(
+  170deg,
+  $color-secondary 0%,
+  $color-primary 100%
+);
+
+$gradient-heart: linear-gradient(
+  0deg,
+  $color-secondary 0%,
+  $color-primary 100%
+);
+
+// SVG gradient heart
+#stopGradPrimary {
+  stop-color: colors.$svgPrimary;
+}
+#stopGradSecondary {
+  stop-color: colors.$svgSecondary;
+}
+
+.heart-container {
+  width: 100px;
+  height: 100px;
+}
+
+.heart {
+  width: 70%;
+  height: 70%;
+}
+
+.heart-shape {
+  fill: none;
+  stroke: black;
+  stroke-width: 5;
+  //opacity: 1;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    //stroke-opacity: 0;
+    //fill-opacity: 1;
+    fill: url(#heart-gradient);
+  }
+}
+
+.coeurKhaos {
+  color: black;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background: linear-gradient(#9356dc, #ff79da);
+    color: transparent;
+    font-weight: 600;
+    transform: scale(1.1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+
+
+body div{
+  display: flex;
+  flex-direction: row ;
+  flex-wrap: nowrap;
+}
