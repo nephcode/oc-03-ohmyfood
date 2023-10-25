@@ -28,10 +28,11 @@
   text-decoration: none;
 
   //:hover, :active nesting anination
-  &:hover,
-  :active {
+  &:hover{
     opacity: 0.8;
-    transition: opacity 250ms;
+    transition: opacity 500ms,  box-shadow 350ms;
+    //box-shadow: colors.$buttonShadowHover;
+    @include buttonShadow(colors.$buttonShadowHover, colors.$buttonShadowValues);
   }
 }
 // ADD =============================== By Nepha ================2023==//
@@ -78,8 +79,18 @@
   //color: #008766;
 }
 
-.JoliCoeur {
-  width: 25px;
+.coeurKhaos {
+  color: black;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  &:hover {
+  //background: linear-gradient(#9356DC, #FF79DA);
+  color: linear-gradient(#9356DC, #FF79DA);
+  font-weight: 600;
+  transform: scale(1.2);
+  background-clip: text;
+  //color-fill: transparent;
+  }
 }
 
 // LIST WIZARD ======================= By Nepha ================2023==//
