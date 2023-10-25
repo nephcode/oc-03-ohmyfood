@@ -81,17 +81,14 @@ $radiusCard: 20px;
       fill: colors.$heart-primary;
     }*/
     &__Coeur {
+      font-size: 1.5rem;
       display: block;
       position: absolute;
       right: 20px;
-      bottom: 15px;
-      //
-      height: 25px;
-      width: 25px;
-      fill: none;
-      stroke: currentColor;
+      bottom: 20px;
       z-index: 10;
-  /*
+      
+      /*
       &:hover {
         opacity: 0.8;
         transition: opacity 850ms;
@@ -101,4 +98,5 @@ $radiusCard: 20px;
 
   }
   
+}
 }

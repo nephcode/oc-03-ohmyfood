@@ -29,13 +29,20 @@
 .coeurKhaos {
   color: black;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .coeurKhaos:hover {
-  background: linear-gradient(#9356DC, #FF79DA);
-  color: white;
+  background: linear-gradient(#9356dc, #ff79da);
+  color: transparent;
   font-weight: 600;
-  transform: scale(1.2);
+  transform: scale(1.1);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+body div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }/*# sourceMappingURL=debug.css.map */

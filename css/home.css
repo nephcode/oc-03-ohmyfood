@@ -19,10 +19,10 @@ p {
   border-radius: 50px;
   text-decoration: none;
 }
-.buttonValid:hover,
-.buttonValid :active {
+.buttonValid:hover {
   opacity: 0.8;
-  transition: opacity 250ms;
+  transition: opacity 500ms, box-shadow 350ms;
+  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.4);
 }
 
 .addFavorite {
@@ -64,8 +64,7 @@ p {
   transition: all 0.2s ease-in-out;
 }
 .coeurKhaos:hover {
-  background: linear-gradient(#9356DC, #FF79DA);
-  color: white;
+  color: linear-gradient(#9356DC, #FF79DA);
   font-weight: 600;
   transform: scale(1.2);
   background-clip: text;
@@ -192,27 +191,6 @@ p {
   flex-basis: 90%;
   margin-bottom: 15px;
   position: relative;
-  /*
-  .icone {
-    display: block;
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
-    //
-    height: 25px;
-    width: 25px;
-    fill: none;
-    stroke: currentColor;
-    z-index: 10;
-
-    &:hover {
-      opacity: 0.8;
-      transition: opacity 850ms;
-      color: color-mix(in srgb, color percentage, color percentage);
-      fill: colors.$heart-primary;
-    }
-  }
-  */
 }
 .card a {
   background-color: #ffffff;
@@ -254,6 +232,38 @@ p {
   width: 25px;
   height: 25px;
   display: block;
+}
+.card .icone {
+  display: block;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  height: 25px;
+  width: 25px;
+  fill: none;
+  stroke: currentColor;
+  z-index: 10;
+  /*&:hover {
+    opacity: 0.8;
+    transition: opacity 850ms;
+    color: color-mix(in srgb, color percentage, color percentage);
+    fill: colors.$heart-primary;
+  }*/
+}
+.card .icone__Coeur {
+  font-size: 1.5rem;
+  display: block;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+  /*
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 850ms;
+    color: color-mix(in srgb, color percentage, color percentage);
+    fill: colors.$heart-primary;
+  }*/
 }
 
 #stop-1 {
@@ -326,6 +336,68 @@ i svg {
   fill: #9356dc;
 }
 
+/* heart button */
+.heart-btn {
+  font-size: 1.5rem;
+}
+.heart-btn i {
+  cursor: pointer;
+  background: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px black;
+  position: relative;
+  padding: 0 1.5px;
+}
+.heart-btn i::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  aspect-ratio: 1/1;
+  opacity: 1;
+  background-color: #9356dc;
+  border-radius: 100%;
+}
+.heart-btn i:hover {
+  background: linear-gradient(0deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: fade 0.6s forwards;
+}
+@keyframes fade {
+  from {
+    -webkit-text-stroke: 1.5px black;
+    background: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  to {
+    background: linear-gradient(0deg, #ff79da 0%, #9356dc 100%);
+    background-clip: text;
+    -webkit-text-stroke: 1.5px transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.heart-btn i:hover::after {
+  animation: circle 0.6s ease-out forwards;
+}
+@keyframes circle {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 50px;
+    opacity: 0;
+  }
+}
+
 * {
   /* Rules */
   box-sizing: border-box;
@@ -357,6 +429,7 @@ header .logo {
 }
 header nav {
   justify-self: start;
+  margin-left: 15px;
 }
 @media screen and (min-width: 767px) {
   header {
@@ -583,6 +656,7 @@ header nav {
     margin: 0 auto;
   }
   #fonctionnement h2 {
+    font-size: 1.6rem;
     max-width: 1080px;
     margin: 5px auto 10px;
   }
@@ -609,6 +683,7 @@ header nav {
 }
 #restaurant h2 {
   width: 100%;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;

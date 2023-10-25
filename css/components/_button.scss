@@ -28,10 +28,11 @@
   text-decoration: none;
 
   //:hover, :active nesting anination
-  &:hover,
-  :active {
+  &:hover{
     opacity: 0.8;
-    transition: opacity 250ms;
+    transition: opacity 500ms,  box-shadow 350ms;
+    //box-shadow: colors.$buttonShadowHover;
+    @include buttonShadow(colors.$buttonShadowHover, colors.$buttonShadowValues);
   }
 }
 // ADD =============================== By Nepha ================2023==//
