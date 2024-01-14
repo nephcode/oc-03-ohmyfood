@@ -28,11 +28,14 @@
   text-decoration: none;
 
   //:hover, :active nesting anination
-  &:hover{
+  &:hover {
     opacity: 0.8;
-    transition: opacity 500ms,  box-shadow 350ms;
+    transition: opacity 500ms, box-shadow 350ms;
     //box-shadow: colors.$buttonShadowHover;
-    @include buttonShadow(colors.$buttonShadowHover, colors.$buttonShadowValues);
+    @include buttonShadow(
+      colors.$buttonShadowHover,
+      colors.$buttonShadowValues
+    );
   }
 }
 // ADD =============================== By Nepha ================2023==//
@@ -78,7 +81,7 @@
   padding: 5px 10px; /* Espace intérieur autour du texte */
   //color: #008766;
 }
-
+/*
 .coeurKhaos {
   color: black;
   cursor: pointer;
@@ -92,7 +95,7 @@
   //color-fill: transparent;
   }
 }
-
+*/
 // LIST WIZARD ======================= By Nepha ================2023==//
 .listWizard {
   display: flex;
@@ -160,13 +163,12 @@
         text-overflow: ellipsis;
         white-space: nowrap;
 
-        span{
+        span {
           width: 100%;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
-
       }
 
       &:nth-child(2) {
@@ -198,24 +200,22 @@
       }
 
       span {
-       // display: flex;
+        // display: flex;
 
         &[itemprop="name"] {
           font-weight: bold;
           width: 100%;
-          overflow: hidden; 
+          overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-      
         }
         &[itemprop="description"] {
           font-size: 0.8rem;
           font-weight: lighter;
           //overflow-wrap: break-word;
           white-space: nowrap;
-          overflow: hidden; 
+          overflow: hidden;
           text-overflow: ellipsis;
-      
         }
 
         &[itemprop="offers"] {
