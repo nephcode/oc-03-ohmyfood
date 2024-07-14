@@ -1,4 +1,4 @@
-![cover](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/public/oc-react/readme-header-oc-03-react.png)
+![cover](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/public/oc-react/readme-header-oc-react-03.png)
 
 # OHMYFOOD
 
